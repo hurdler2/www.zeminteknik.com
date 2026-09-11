@@ -2,7 +2,7 @@
 header('Content-Type: application/json; charset=utf-8');
 
 $to = "bilgi@zeminteknik.com"; // Başvuru e-postası
-$subject = "Yeni İş Başvurusu";
+$subject = "=?UTF-8?B?" . base64_encode("Yeni İş Başvurusu") . "?=";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = isset($_POST["name"]) ? strip_tags(trim($_POST["name"])) : '';

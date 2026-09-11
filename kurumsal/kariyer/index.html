@@ -20,7 +20,7 @@
         h1, h2, h3, h4, h5, h6, .heading-font { font-family: 'Archivo', sans-serif; font-weight: 900; letter-spacing: 0; text-transform: uppercase; }
         #mainHeader.bg-blue-900 { background-color: #ffffff !important; }
     </style>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=Inter:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap" rel="stylesheet"/><link href="../../css/zt.css" rel="stylesheet"/></head>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=Inter:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap" rel="stylesheet"/><link href="../../css/zt.css?v=2f3cbd14" rel="stylesheet"/></head>
 <body class="bg-gray-50"><div class="zt-topbar">
 <div class="zt-topbar__inner">
 <div class="zt-topbar__meta">
@@ -281,11 +281,12 @@
   var f=document.querySelector('form[action="job-application.php"]'), out=document.getElementById('formResult'); if(!f) return;
   f.addEventListener('submit', function(e){
     e.preventDefault(); var btn=f.querySelector('button[type="submit"]'); var old=btn.textContent; btn.disabled=true; btn.textContent='Gönderiliyor...';
-    window.ztPostForm(f.action,new FormData(f)).then(function(d){
+    var fd=new FormData(f); var post=(typeof window.ztPostForm==='function')?window.ztPostForm(f.action,fd):fetch(f.action,{method:'POST',body:fd,credentials:'same-origin'}).then(function(r){return r.json();});
+    post.then(function(d){
       out.textContent=d.message||(d.success?'Başvurunuz gönderildi.':'Bir hata oluştu.'); out.style.color=d.success?'#1f9e9a':'#d4570f'; if(d.success) f.reset();
     }).catch(function(err){ out.textContent=(err&&err.message)||'Bağlantı hatası, lütfen tekrar deneyin.'; out.style.color='#d4570f'; })
     .finally(function(){ btn.disabled=false; btn.textContent=old; });
   });
 })();
-</script><script src="../../js/zt.js"></script></body>
+</script><script src="../../js/zt.js?v=a8e4892e"></script></body>
 </html> 
