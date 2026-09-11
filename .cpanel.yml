@@ -8,8 +8,6 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home2/sadlxfte/public_html/website_48e252e1
     - /bin/mkdir -p $DEPLOYPATH
-    # Tek seferlik temizlik: ilk dağıtımın yanlışlıkla public_html'e bıraktığı kopyaları kaldır (yalnızca depo kökündeki adlar)
-    - for f in $(/usr/bin/git ls-tree --name-only HEAD); do /bin/rm -rf "/home2/sadlxfte/public_html/$f"; done
     - /usr/bin/rsync -a --delete --exclude='.git' --exclude='.cpanel.yml' --exclude='.gitignore' --exclude='README.md' --exclude='tools' --exclude='__MACOSX' --exclude='.DS_Store' --exclude='*.zip' --exclude='cgi-bin' --exclude='.well-known' ./ $DEPLOYPATH/
     - /usr/bin/find $DEPLOYPATH -type d -not -path '*/cgi-bin*' -exec /bin/chmod 755 {} +
     - /usr/bin/find $DEPLOYPATH -type f -not -path '*/cgi-bin/*' -exec /bin/chmod 644 {} +
