@@ -13,13 +13,11 @@ PARENT = os.path.dirname(ROOT)
 DST = os.path.join(PARENT, "zeminteknik_yayin")
 ZIP = DST + ".zip"
 SKIP_DIRS = {"__MACOSX", "cgi-bin", ".git", "tools"}
-SKIP_FILES = {".DS_Store", "README.md", ".gitignore"}
+SKIP_FILES = {".DS_Store", "README.md", ".gitignore", ".cpanel.yml"}
 
 def wanted(src, rel):
     if os.path.basename(src) in SKIP_FILES or src.lower().endswith(".zip"):
         return False
-    if rel == "hizmetler/projeler/index.html" and not io.open(src, encoding="utf-8", errors="ignore").read().strip():
-        return False          # içi boş, hatalı eski dosya
     return True
 
 if os.path.isdir(DST):

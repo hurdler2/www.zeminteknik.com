@@ -1,0 +1,11 @@
+---
+# cPanel "Git Version Control" dağıtım tanımı.
+# Depo ~/repositories/www.zeminteknik.com içine klonlanır; "Deploy HEAD Commit" (veya cron) bu görevleri çalıştırır
+# ve site dosyalarını public_html'e eşitler. Geliştirme artıkları kopyalanmaz; hosting'e ait
+# cgi-bin ve .well-known klasörlerine dokunulmaz.
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home2/sadlxfte/public_html
+    - /usr/bin/rsync -a --delete --exclude='.git' --exclude='.cpanel.yml' --exclude='.gitignore' --exclude='README.md' --exclude='tools' --exclude='__MACOSX' --exclude='.DS_Store' --exclude='*.zip' --exclude='cgi-bin' --exclude='.well-known' ./ $DEPLOYPATH/
+    - /usr/bin/find $DEPLOYPATH -type d -not -path '*/cgi-bin*' -exec /bin/chmod 755 {} +
+    - /usr/bin/find $DEPLOYPATH -type f -not -path '*/cgi-bin/*' -exec /bin/chmod 644 {} +
