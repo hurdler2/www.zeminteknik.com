@@ -204,6 +204,7 @@
                                 </button>
 </div>
 </form>
+<div aria-live="polite" class="zt-form-result" id="formResult" role="status"></div>
 </div>
 </div>
 
@@ -549,8 +550,8 @@
                     }
                     
                     // Telefon validasyonu
-                    const phoneRegex = /^[\+]?[0-9\s\-\(\)]{10,}$/;
-                    if (!phoneRegex.test(phone)) {
+                    const phoneDigits = String(phone).replace(/\D/g, '');
+                    if (phoneDigits.length < 10 || phoneDigits.length > 15) {
                         showNotification('Lütfen geçerli bir telefon numarası girin.', 'error');
                         submitBtn.disabled = false;
                         submitBtn.innerHTML = originalText;
@@ -560,14 +561,17 @@
                     // Simüle edilmiş form gönderimi (gerçek uygulamada backend'e gönderilir)
                     fetch(this.action, {
                         method: 'POST',
-                        body: formData
+                        body: formData,
+                        headers: { 'Accept': 'application/json' }
                     })
-                    .then(response => response.json())
+                    .then(response => response.text().then(text => {
+                        try { return JSON.parse(text); }
+                        catch (err) { throw new Error('Sunucu beklenmedik bir yanıt döndürdü (HTTP ' + response.status + ').'); }
+                    }))
                     .then(data => {
                         if (data.success) {
                             showNotification(data.message, 'success');
                             contactForm.reset();
-                            formResult.textContent = data.message;
                         } else {
                             showNotification(data.message || 'Mesaj gönderilemedi. Lütfen tekrar deneyin.', 'error');
                         }
@@ -575,7 +579,7 @@
                         submitBtn.innerHTML = originalText;
                     })
                     .catch(error => {
-                        showNotification('Bir hata oluştu: ' + error.message, 'error');
+                        showNotification('Mesaj gönderilemedi: ' + error.message, 'error');
                         submitBtn.disabled = false;
                         submitBtn.innerHTML = originalText;
                     });
@@ -584,6 +588,12 @@
             
             // Bildirim gösterme fonksiyonu
             function showNotification(message, type) {
+                // Sonucu formun altında da göster (üst bildirim başlığın altında kalabilir)
+                if (formResult) {
+                    formResult.textContent = message;
+                    formResult.className = 'zt-form-result is-' + (type === 'success' ? 'success' : 'error');
+                    formResult.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+                }
                 // Mevcut bildirimi kaldır
                 const existingNotification = document.querySelector('.notification');
                 if (existingNotification) {
@@ -592,21 +602,20 @@
                 
                 // Yeni bildirim oluştur
                 const notification = document.createElement('div');
-                notification.className = `notification fixed top-4 right-4 z-50 p-4 rounded-xl shadow-lg transform transition-all duration-300 translate-x-full`;
+                notification.className = 'notification notification--' + (type === 'success' ? 'success' : 'error') + ' translate-x-full';
                 
                 const bgColor = type === 'success' ? 'bg-green-500' : 'bg-red-500';
                 const icon = type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle';
                 
                 notification.innerHTML = `
-                    <div class="flex items-center ${bgColor} text-white p-4 rounded-xl">
-                        <i class="fas ${icon} text-xl mr-3"></i>
-                        <span class="font-semibold">${message}</span>
-                        <button class="ml-4 text-white hover:text-gray-200" onclick="this.parentElement.parentElement.remove()">
-                            <i class="fas fa-times"></i>
-                        </button>
+                    <div class="notification__inner">
+                        <i class="fas ${icon}"></i>
+                        <span></span>
+                        <button type="button" aria-label="Kapat" onclick="this.parentElement.parentElement.remove()"><i class="fas fa-times"></i></button>
                     </div>
                 `;
                 
+                notification.querySelector('span').textContent = message;
                 document.body.appendChild(notification);
                 
                 // Animasyon
@@ -622,7 +631,7 @@
                             notification.remove();
                         }
                     }, 300);
-                }, 5000);
+                }, 7000);
             }
             
             // Form alanları için animasyonlar

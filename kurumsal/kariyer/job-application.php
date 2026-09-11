@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $encoded_content = chunk_split(base64_encode($content));
 
         $boundary = md5("random"); // boundary tanımı
-        $headers = "From: $email\r\n";
+        $headers = "From: Zemin Teknik Web <bilgi@zeminteknik.com>\r\nReply-To: $email\r\n";
         $headers .= "MIME-Version: 1.0\r\n";
         $headers .= "Content-Type: multipart/mixed; boundary = $boundary\r\n\r\n";
 
@@ -53,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail_sent = mail($to, $subject, $body_message, $headers);
     } else {
         // Dosya yoksa normal gönder
-        $headers = "From: $email\r\nReply-To: $email\r\n";
+        $headers = "From: Zemin Teknik Web <bilgi@zeminteknik.com>\r\nReply-To: $email\r\nContent-Type: text/plain; charset=utf-8\r\n";
         $mail_sent = mail($to, $subject, $body, $headers);
     }
 

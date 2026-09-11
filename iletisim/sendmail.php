@@ -2,7 +2,7 @@
 header('Content-Type: application/json; charset=utf-8');
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $to = "bilgi@zeminteknik.com"; // Buraya kendi e-posta adresinizi yazın
-    $subject = "İletişim Formu Mesajı";
+    $subject = "=?UTF-8?B?" . base64_encode("İletişim Formu Mesajı") . "?=";
     $name = isset($_POST["name"]) ? strip_tags(trim($_POST["name"])) : '';
     $company = isset($_POST["company"]) ? strip_tags(trim($_POST["company"])) : '';
     $email = isset($_POST["email"]) ? filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL) : '';
@@ -15,7 +15,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    $headers = "From: $email\r\nReply-To: $email\r\n";
+    // Paylaşımlı sunucular alan adı dışından From başlığını reddedebilir: gönderici alan adından, yanıt kullanıcıya.
+    $headers = "From: Zemin Teknik Web <bilgi@zeminteknik.com>\r\nReply-To: $email\r\nContent-Type: text/plain; charset=utf-8\r\n";
     $body = "Ad Soyad: $name\nFirma: $company\nE-posta: $email\nTelefon: $phone\nKonu: $subjectForm\nMesaj:\n$message";
 
     if (mail($to, $subject, $body, $headers)) {

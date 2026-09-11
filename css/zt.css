@@ -709,3 +709,17 @@ body.zt-home .zt-topbar__social a { background: rgba(255,255,255,.12); border-co
 .zt-content table thead tr, .zt-content table:not(:has(thead)) tr:first-child { background: var(--navy-50) !important; color: var(--navy-900) !important; }
 .zt-content table thead th, .zt-content table:not(:has(thead)) tr:first-child td { color: var(--navy-900) !important; }
 .zt-content .faq-category-btn.active { background: var(--orange) !important; color: #fff !important; border-color: var(--orange) !important; }
+
+/* Form sonuç mesajı ve üst bildirim (iletişim / kariyer) */
+.zt-form-result { display: none; margin-top: 1rem; padding: .85rem 1rem; border-radius: var(--r-sm); font-size: .92rem; font-weight: 500; line-height: 1.5; }
+.zt-form-result.is-success { display: block; background: var(--teal-100); color: #0f5f5c; border: 1px solid rgba(31,158,154,.35); }
+.zt-form-result.is-error { display: block; background: #fdecec; color: #9f1d1d; border: 1px solid rgba(220,38,38,.3); }
+.notification { position: fixed; top: 6rem; right: 1rem; z-index: 300; max-width: min(28rem, calc(100vw - 2rem)); transition: transform .3s var(--ease), opacity .3s; }
+.notification.translate-x-full { transform: translateX(calc(100% + 1.5rem)); opacity: 0; }
+.notification__inner { display: flex; align-items: flex-start; gap: .75rem; padding: .9rem 1rem; border-radius: var(--r); color: #fff; box-shadow: var(--shadow-lg); font-size: .92rem; font-weight: 500; line-height: 1.45; }
+.notification--success .notification__inner { background: var(--teal); }
+.notification--error .notification__inner { background: #c62828; }
+.notification__inner > i { margin-top: .15rem; font-size: 1.05rem; }
+.notification__inner button { margin-left: auto; background: none; border: 0; color: #fff; opacity: .8; cursor: pointer; padding: 0 0 0 .5rem; }
+.notification__inner button:hover { opacity: 1; }
+@media (max-width: 767px) { .notification { top: 5rem; } }
