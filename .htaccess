@@ -88,6 +88,10 @@ Options -Indexes
 RewriteEngine On
 RewriteBase /
 
+# /dizin/index.html -> /dizin/ (temiz URL, kalıcı yönlendirme; iç yeniden yazımlar THE_REQUEST sayesinde döngüye girmez)
+RewriteCond %{THE_REQUEST} \s/+(.*?)index\.html[\s?] [NC]
+RewriteRule ^(.*?)index\.html$ /%1 [R=301,L]
+
 # www ve https yönlendirmesi
 RewriteCond %{HTTP_HOST} !^www\. [NC]
 RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
