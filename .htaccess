@@ -98,16 +98,9 @@ RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# Eğer istenen dosya veya dizin yoksa, index.html'ye yönlendir
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.+)/$ /$1/index.html [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.+)$ /$1/index.html [L]
-
-# Ana sayfa
-RewriteRule ^$ index.html [L]
+# Dizin istekleri (/iletisim/) Apache'nin DirectoryIndex'i ile index.html'e gider; var olmayan adresler
+# 404.html'e düşer. (Eski "yoksa index.html'e yaz" kuralları kendi içinde döngüye girip 500 veriyordu.)
+DirectoryIndex index.html index.php
 
 # 404 hata sayfası
 ErrorDocument 404 /404.html
