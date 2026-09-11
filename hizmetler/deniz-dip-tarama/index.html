@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Deniz Dibi Numune Alımı | Zemin Teknik</title>
+<meta content="Zemin Teknik'in deniz sondaj hizmetleri, modern ekipmanlar, uzman kadro ve örnek projeler." name="description"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="../../images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="../../images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../../images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../../images/site.webmanifest" rel="manifest"/>
+<style>
+        :root {
+            --primary-blue: #1e3a8a;
+            --secondary-blue: #2563eb;
+            --accent-yellow: #f59e0b;
+            --dark-gray: #1f2937;
+            --light-gray: #f3f4f6;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            overflow-x: hidden;
+            
+        }
+        @media (max-width: 768px) {
+            body {
+                zoom: 1 !important;
+                -moz-transform: scale(1) !important;
+            }
+        }
+        
+        h1, h2, h3, h4, .heading-font {
+            font-family: 'Archivo', sans-serif;
+            font-weight: 900;
+            letter-spacing: 0;
+            text-transform: uppercase;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(30,58,138,0.9) 0%, rgba(37,99,235,0.8) 100%);
+        }
+        
+        .floating {
+            animation: floating 6s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .tech-badge {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .tech-badge::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -60%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255,255,255,0.13);
+            transform: rotate(30deg);
+            transition: all 0.3s ease;
+        }
+        
+        .tech-badge:hover::after {
+            left: 100%;
+        }
+        
+        .equipment-card {
+            perspective: 1000px;
+        }
+        
+        .equipment-inner {
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+        
+        .equipment-card:hover .equipment-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .equipment-front, .equipment-back {
+            backface-visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .equipment-back {
+            transform: rotateY(180deg);
+        }
+        
+        .progress-ring__circle {
+            transition: stroke-dashoffset 0.9s;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+        }
+        
+        .mobile-dropdown-btn { transition: all 0.3s ease; }
+        .mobile-dropdown-btn.active { background-color: #f3f4f6; }
+        .mobile-dropdown-btn.active i { transform: rotate(180deg); }
+        .mobile-dropdown-btn i { transition: transform 0.3s ease; }
+        
+        .mobile-sub-dropdown-btn { transition: all 0.3s ease; }
+        .mobile-sub-dropdown-btn.active { background-color: #f3f4f6; }
+        .mobile-sub-dropdown-btn.active i { transform: rotate(90deg); }
+        .mobile-sub-dropdown-btn i { transition: transform 0.3s ease; }
+        
+        /* Mobilde yazıların okunaklı görünmesi için */
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px !important;
+                line-height: 1.6 !important;
+            }
+            h1, h2, h3, h4 {
+                font-size: 1.5rem !important;
+                line-height: 1.3 !important;
+                margin-bottom: 1rem !important;
+            }
+            p {
+                font-size: 1rem !important;
+                line-height: 1.6 !important;
+                margin-bottom: 1rem !important;
+            }
+            .text-lg {
+                font-size: 1.1rem !important;
+            }
+            .text-xl {
+                font-size: 1.25rem !important;
+            }
+            .text-2xl {
+                font-size: 1.5rem !important;
+            }
+            .text-3xl {
+                font-size: 1.875rem !important;
+            }
+            .text-4xl {
+                font-size: 2.25rem !important;
+            }
+        }
+
+        [data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.whatsapp-float {
+  box-shadow: 0 8px 32px 0 rgba(37, 211, 102, 0.25), 0 1.5px 8px 0 rgba(0,0,0,0.10);
+  animation: whatsapp-pulse 2s infinite;
+  border: 3px solid #fff;
+}
+@keyframes whatsapp-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4), 0 8px 32px 0 rgba(37, 211, 102, 0.25); }
+  70% { box-shadow: 0 0 0 16px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4), 0 8px 32px 0 rgba(37, 211, 102, 0.25); }
+}
+
+.hero-section {
+  height: 60vh;
+}
+@media (max-width: 640px) {
+  .hero-section {
+    height: 72vh !important;
+  }
+}
+@media (min-width: 640px) {
+  .hero-section {
+    height: 340px !important;
+  }
+}
+@media (min-width: 768px) {
+  .hero-section {
+    height: 110vh !important;
+  }
+}
+@media (min-width: 1024px) {
+  .hero-section {
+    height: 120vh !important;
+  }
+}
+
+#mainHeader.bg-blue-900 {
+  background-color: #ffffff !important;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+.animate-slideIn {
+  animation: slideIn 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+    </style>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=Inter:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap" rel="stylesheet"/><link href="../../css/zt.css" rel="stylesheet"/></head>
+<body class="bg-gray-50"><div class="zt-topbar">
+<div class="zt-topbar__inner">
+<div class="zt-topbar__meta">
+<a href="tel:+902164895277"><i class="fas fa-phone-alt"></i> +90 216 489 52 77</a>
+<a href="mailto:bilgi@zeminteknik.com"><i class="fas fa-envelope"></i> bilgi@zeminteknik.com</a>
+<span><i class="fas fa-map-marker-alt"></i> Maltepe / İstanbul</span>
+<span><i class="fas fa-clock"></i> Hafta içi 09:00 – 17:00</span>
+</div>
+<div class="zt-topbar__social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/zt-zemi̇n-tekni̇k" rel="noopener" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+<a aria-label="Instagram" href="https://www.instagram.com/zeminteknik" rel="noopener" target="_blank"><i class="fab fa-instagram"></i></a>
+<a aria-label="YouTube" href="https://www.youtube.com/@ZeminTeknik" rel="noopener" target="_blank"><i class="fab fa-youtube"></i></a>
+<a aria-label="Facebook" href="https://www.facebook.com/p/Zemin-Teknik-100057754535914/?locale=tr_TR" rel="noopener" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a aria-label="WhatsApp" href="https://wa.me/905322097496" rel="noopener" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<span class="zt-topbar__lang"><i class="fas fa-globe"></i> TR</span>
+</div>
+</div>
+</div><header class="zt-header" id="mainHeader">
+<div class="zt-header__inner">
+<a aria-label="Zemin Teknik ana sayfa" class="zt-logo" href="../../index.html"><img alt="Zemin Teknik" src="../../images/header-logo.png"/></a>
+<nav aria-label="Ana menü" class="zt-nav">
+<a href="../../index.html">Ana Sayfa</a>
+<div class="zt-nav__item"><a href="../../kurumsal/hakkimizda/index.html">Kurumsal <i class="fas fa-chevron-down"></i></a>
+<div class="zt-dropdown"><a href="../../kurumsal/hakkimizda/index.html">Hakkımızda</a>
+<a href="../../kurumsal/tarihce/index.html">Tarihçe</a>
+<a href="../../kurumsal/vizyon/index.html">Vizyon &amp; Misyon</a>
+<a href="../../kurumsal/sertifikalar/index.html">Sertifikalar</a>
+<a href="../../kurumsal/kariyer/index.html">Kariyer</a></div></div>
+<div class="zt-nav__item"><a href="../../hizmetler/deniz-sondaj-hizmetleri/index.html">Hizmetler <i class="fas fa-chevron-down"></i></a>
+<div class="zt-dropdown"><a href="../../hizmetler/deniz-sondaj-hizmetleri/index.html">Deniz Sondaj Hizmetleri</a>
+<a href="../../hizmetler/kara-sondaj-hizmetleri/index.html">Kara Sondaj Hizmetleri</a>
+<a href="../../hizmetler/deniz-dip-tarama/index.html">Deniz Dibi Numune Alımı</a>
+<a href="../../hizmetler/batimetrik-haritalama/index.html">Batimetrik Haritalama</a>
+<a href="../../hizmetler/yer-radari-gpr-uygulamalari/index.html">Yer Radarı (GPR) Uygulamaları</a>
+<a href="../../hizmetler/sismik-risk-zemin-analizleri/index.html">Sismik Risk &amp; Zemin Dinamik Analizleri</a>
+<a href="../../hizmetler/raporlama-danismanlik/index.html">Raporlama &amp; Danışmanlık</a>
+<a href="../../hizmetler/su-kuyusu-acimi/index.html">Su Kuyusu Açımı</a></div></div>
+<div class="zt-nav__item"><a href="../../ekipmanlar/ruhsatli-sondaj-gemisi/index.html">Ekipmanlar <i class="fas fa-chevron-down"></i></a>
+<div class="zt-dropdown zt-dropdown--mega">
+<div><div class="zt-dropdown__group">Sondaj &amp; saha</div><a href="../../ekipmanlar/erd-sondaj-makinesi/index.html">ERD Sondaj Makinesi</a>
+<a href="../../ekipmanlar/ruhsatli-sondaj-gemisi/index.html">Ruhsatlı Sondaj Gemisi</a>
+<a href="../../ekipmanlar/yuzer-platform/index.html">Yüzer Platform (Duba)</a>
+<a href="../../ekipmanlar/nwg-karotiyerli-sondaj-makinesi/index.html">NWG Karotiyerli Sondaj Makinesi</a>
+<a href="../../ekipmanlar/grab-box-corer/index.html">Grab &amp; Box Corer</a>
+<a href="../../ekipmanlar/elektrik-rezistivite-gpr/index.html">Elektrik Rezistivite &amp; GPR</a>
+<a href="../../ekipmanlar/mobil-bot-tekne/index.html">Mobil Bot (Tekne)</a>
+<a href="../../ekipmanlar/presiyometre-cihazi/index.html">Presiyometre Cihazı</a></div>
+<div><div class="zt-dropdown__group">Batimetrik cihazlar</div><a href="../../ekipmanlar/batimetrik-cihazlar/single-beam-ekolot/index.html">Single Beam Ekolot</a>
+<a href="../../ekipmanlar/batimetrik-cihazlar/multi-beam-ekolot/index.html">Multi Beam Ekolot</a>
+<a href="../../ekipmanlar/batimetrik-cihazlar/gnss-rtk-gps-sistemi/index.html">GNSS RTK GPS Sistemi</a><div class="zt-dropdown__group" style="margin-top:.5rem">Sismik cihazlar</div><a href="../../ekipmanlar/sismik-cihazlar/masw/index.html">MASW</a>
+<a href="../../ekipmanlar/sismik-cihazlar/mikrotremor/index.html">Mikrotremör</a>
+<a href="../../ekipmanlar/sismik-cihazlar/kuyu-ici-sismik/index.html">Kuyu İçi Sismik</a></div>
+</div></div>
+<a href="../../projeler/index.html">Projeler</a>
+<a href="../../blog/index.html">Blog</a>
+<a href="../../iletisim/index.html">İletişim</a>
+</nav>
+<div class="zt-header__cta"><a class="zt-btn zt-btn--primary zt-btn--sm" href="../../iletisim/index.html"><i class="fas fa-file-signature"></i> Teklif Al</a></div>
+<button aria-label="Menüyü aç" class="zt-burger" id="mobileMenuBtn"><span></span><span></span><span></span></button>
+</div>
+</header>
+<div class="zt-drawer hidden" id="mobileMenuDrawer">
+<div class="zt-drawer__panel">
+<div class="zt-drawer__top"><img alt="Zemin Teknik" src="../../images/header-logo.png"/><button aria-label="Menüyü kapat" id="closeMobileMenu"><i class="fas fa-times"></i></button></div>
+<a class="zt-drawer__link" href="../../index.html">Ana Sayfa</a>
+<button class="mobile-dropdown-btn" data-target="kurumsalMenu">Kurumsal <i class="fas fa-chevron-down"></i></button>
+<div class="zt-drawer__sub hidden" id="kurumsalMenu"><a href="../../kurumsal/hakkimizda/index.html">Hakkımızda</a>
+<a href="../../kurumsal/tarihce/index.html">Tarihçe</a>
+<a href="../../kurumsal/vizyon/index.html">Vizyon &amp; Misyon</a>
+<a href="../../kurumsal/sertifikalar/index.html">Sertifikalar</a>
+<a href="../../kurumsal/kariyer/index.html">Kariyer</a></div>
+<button class="mobile-dropdown-btn" data-target="hizmetlerMenu">Hizmetler <i class="fas fa-chevron-down"></i></button>
+<div class="zt-drawer__sub hidden" id="hizmetlerMenu"><a href="../../hizmetler/deniz-sondaj-hizmetleri/index.html">Deniz Sondaj Hizmetleri</a>
+<a href="../../hizmetler/kara-sondaj-hizmetleri/index.html">Kara Sondaj Hizmetleri</a>
+<a href="../../hizmetler/deniz-dip-tarama/index.html">Deniz Dibi Numune Alımı</a>
+<a href="../../hizmetler/batimetrik-haritalama/index.html">Batimetrik Haritalama</a>
+<a href="../../hizmetler/yer-radari-gpr-uygulamalari/index.html">Yer Radarı (GPR) Uygulamaları</a>
+<a href="../../hizmetler/sismik-risk-zemin-analizleri/index.html">Sismik Risk &amp; Zemin Dinamik Analizleri</a>
+<a href="../../hizmetler/raporlama-danismanlik/index.html">Raporlama &amp; Danışmanlık</a>
+<a href="../../hizmetler/su-kuyusu-acimi/index.html">Su Kuyusu Açımı</a></div>
+<button class="mobile-dropdown-btn" data-target="ekipmanlarMenu">Ekipmanlar <i class="fas fa-chevron-down"></i></button>
+<div class="zt-drawer__sub hidden" id="ekipmanlarMenu"><a href="../../ekipmanlar/erd-sondaj-makinesi/index.html">ERD Sondaj Makinesi</a>
+<a href="../../ekipmanlar/ruhsatli-sondaj-gemisi/index.html">Ruhsatlı Sondaj Gemisi</a>
+<a href="../../ekipmanlar/yuzer-platform/index.html">Yüzer Platform (Duba)</a>
+<a href="../../ekipmanlar/nwg-karotiyerli-sondaj-makinesi/index.html">NWG Karotiyerli Sondaj Makinesi</a>
+<a href="../../ekipmanlar/grab-box-corer/index.html">Grab &amp; Box Corer</a>
+<a href="../../ekipmanlar/elektrik-rezistivite-gpr/index.html">Elektrik Rezistivite &amp; GPR</a>
+<a href="../../ekipmanlar/mobil-bot-tekne/index.html">Mobil Bot (Tekne)</a>
+<a href="../../ekipmanlar/presiyometre-cihazi/index.html">Presiyometre Cihazı</a>
+<button class="mobile-sub-dropdown-btn" data-target="batimetrikMobileMenu" type="button">Batimetrik Cihazlar <i class="fas fa-chevron-down"></i></button>
+<div class="zt-drawer__sub hidden" id="batimetrikMobileMenu"><a href="../../ekipmanlar/batimetrik-cihazlar/single-beam-ekolot/index.html">Single Beam Ekolot</a>
+<a href="../../ekipmanlar/batimetrik-cihazlar/multi-beam-ekolot/index.html">Multi Beam Ekolot</a>
+<a href="../../ekipmanlar/batimetrik-cihazlar/gnss-rtk-gps-sistemi/index.html">GNSS RTK GPS Sistemi</a></div>
+<button class="mobile-sub-dropdown-btn" data-target="sismikMobileMenu" type="button">Sismik Cihazlar <i class="fas fa-chevron-down"></i></button>
+<div class="zt-drawer__sub hidden" id="sismikMobileMenu"><a href="../../ekipmanlar/sismik-cihazlar/masw/index.html">MASW</a>
+<a href="../../ekipmanlar/sismik-cihazlar/mikrotremor/index.html">Mikrotremör</a>
+<a href="../../ekipmanlar/sismik-cihazlar/kuyu-ici-sismik/index.html">Kuyu İçi Sismik</a></div>
+</div>
+<a class="zt-drawer__link" href="../../projeler/index.html">Projeler</a>
+<a class="zt-drawer__link" href="../../blog/index.html">Blog</a>
+<a class="zt-drawer__link" href="../../iletisim/index.html">İletişim</a>
+<div class="zt-drawer__cta"><a class="zt-btn zt-btn--primary" href="../../iletisim/index.html">Teklif Al</a><a class="zt-btn zt-btn--outline" href="tel:+902164895277"><i class="fas fa-phone-alt"></i> +90 216 489 52 77</a></div>
+<div class="zt-drawer__meta"><span><i class="fas fa-envelope"></i> bilgi@zeminteknik.com</span><span><i class="fas fa-map-marker-alt"></i> İdealtepe Mh. Rıfkı Tongsir Cd. No:30 D:8 Maltepe / İstanbul</span></div>
+</div>
+</div><section class="zt-page-hero">
+<div class="zt-page-hero__inner">
+<div><nav aria-label="Sayfa yolu" class="zt-crumbs"><a href="../../index.html">Ana Sayfa</a><i class="fas fa-chevron-right"></i><a href="../../hizmetler/deniz-sondaj-hizmetleri/index.html">Hizmetler</a><i class="fas fa-chevron-right"></i><span>Deniz Dibi Numune Alımı</span></nav><h1>Deniz Dibi Numune Alımı</h1><p class="zt-page-hero__lead">Grab ve box corer sistemleriyle deniz tabanından bozulmamış numune alımı; çevresel ve jeoteknik değerlendirme için.</p></div>
+<div class="zt-page-hero__side"><span><b>Hizmet · Deniz</b></span><span>ZT · 2007'den beri</span></div>
+</div>
+</section><div class="zt-content"><section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                Zemin Teknik olarak denizle yalnızca yüzeyde değil, tabanında da konuşuruz. Çünkü suyun
+        altındaki her katman, bir sonraki adımı şekillendirecek eşsiz bilgiler taşır. Deniz dibi numune alımı, bu
+        katmanların içerdiği jeolojik, çevresel ve mühendislik verilerine ulaşmak için uyguladığımız hassas bir
+        prosestir. Özellikle liman projeleri, enerji tesisleri, boru hattı geçişleri, dip tarama çalışmaları ve dolgu
+        planlamaları gibi sahalarda vazgeçilmezdir.
+        Biz bu çalışmayı yalnızca “örnek alma” olarak değil, deniz tabanı ile yapılan bir ilk temas olarak görürüz.
+        Bu temas ne kadar özenli kurulursa, proje süreçleri o kadar sağlam temellere oturur.
+            </p>
+</div>
+</div>
+<div class="flex flex-col gap-6 max-w-7xl mx-auto">
+<h3 class="text-lg font-bold mb-6 heading-font border-b border-gray-700 pb-2">Neden Deniz Dibi Numunesi Alınır?</h3>
+<p>Deniz tabanı, yüzeyden bakıldığında durağan görünse de, altında birçok bilinmeyen barındırır:</p>
+<ul>
+<li>Zemin tipi (kum, kil, çamur, kayaç vb.)</li>
+<li>Tortul yapılar ve birikim kalınlığı</li>
+<li>Organik içerik ve çevresel kirlilik göstergeleri</li>
+<li>Taşınabilirlik ve drenaj özellikleri</li>
+<li>İnşaat yüküne karşı tepkime davranışları</li>
+</ul>
+<p>Doğru ve güvenilir şekilde alınmış numuneler, bu sorulara net yanıt verir. Karar verici makamlar için bu
+        veriler, yatırımın yönünü belirleyen temel haritadır.</p>
+<h3 class="text-lg font-bold mb-6 heading-font border-b border-gray-700 pb-2">Numune Alım Yöntemlerimiz</h3>
+<p> Projeye özel olarak değişen koşullara uygun farklı ekipman ve teknikler kullanarak, farklı derinlik
+        ve zemin tiplerine erişebiliyoruz. Kullanılan sistemler, hem örneğin bozulmamasını hem de yüksek
+        çözünürlüklü veri elde edilmesini sağlar.</p>
+<p class="text-gray-600 text-lg"> ▪ Grab Sampler</p>
+<p>Yüzeyden itibaren ilk birkaç santimetreyi hızlı ve etkili şekilde örneklemek için kullanılır. Genellikle
+        yüzeysel sediment yapısını, canlılık oranını ve kirlilik seviyesini değerlendirmek amacıyla tercih edilir.</p>
+<p class="text-gray-600 text-lg">▪ Gravity Corer</p>
+<p>Kendi ağırlığıyla deniz tabanına saplanarak daha derin tortul yapıları örnekler. Numunenin
+        tabakalanması ve iç yapısı bozulmadan çıkarılır. Bu sayede sedimentin geçmişe dair jeolojik bilgileri
+        okunabilir hale gelir.</p>
+<p class="text-gray-600 text-lg">▪ Box Corer</p>
+<p>Geniş yüzey alanından kutu şeklinde numune alan bu sistem, genellikle hem mühendislik hem çevresel
+        analizler için tercih edilir. Katmanlar arasındaki ayrımlar net şekilde izlenebilir.</p>
+<p class="text-gray-600 text-lg">▪ Pistonlu Corer Sistemleri</p>
+<p>Daha derin numune ihtiyacı olan projelerde, yerçekimiyle yetinmeden aktif piston sistemiyle çalışan bu
+        sistemler tercih edilir. 3-6 metreye kadar bozulmamış numune alma kapasitesine sahiptir.</p>
+<p class="text-gray-800 text-lg bg-blue-200 p-2 rounded-lg">Numune alma yöntemleri, su derinliği, zemin tipi, hedef analizler ve çevresel koşullara göre saha
+        mühendislerimiz tarafından projeye özel olarak planlanır. Her örnek, analiz laboratuvarlarımızda
+        uluslararası standartlara uygun olarak değerlendirilir.</p>
+<h3 class="text-lg font-bold mb-6 heading-font border-b border-gray-700 pb-2">Numunelerden Hangi Veriler Elde Edilir?</h3>
+<p class="text-gray-600 text-lg">Toplanan deniz dibi numuneleri;</p>
+<ul>
+<li>Tane boyu analizi</li>
+<li>Su içeriği ve plastisite</li>
+<li>Organik madde oranı</li>
+<li>Konsolidasyon özellikleri</li>
+<li>Rijitlik ve mukavemet değerleri</li>
+</ul>
+<p>Ağır metal ve kirletici madde tayini gibi birçok alanda değerlendirilebilir. Bu analizler, yalnızca zemin
+            güvenliğini değil, aynı zamanda çevresel sürdürülebilirliği de gözeten projeler üretmek için kritik öneme
+            sahiptir.</p>
+<h3 class="text-lg font-bold mb-6 heading-font border-b border-gray-700 pb-2">Zemin Teknik Farkı</h3>
+<p class="text-gray-600 text-lg bg-blue-200 p-4 rounded-lg border border-gray-700">Deniz dibi numune alımında yalnızca kullanılan ekipman değil, örneğe verilen değer fark yaratır.
+
+        Biz, numuneyi bir torba toprak değil, bir veri deposu olarak görürüz. Alım sürecinden analiz aşamasına
+        kadar geçen her adımı bilimsel titizlikle planlar, gerektiğinde proje ekipleriyle entegre çalışarak örneğin
+        hedeflenen sonuçları verebilmesini sağlarız.
+        Her numune, projenin temelidir. Ve biz, her temeli doğru atmak için buradayız.</p>
+</div>
+</section></div><section class="zt-cta">
+<div class="zt-cta__inner">
+<div><span class="zt-kicker">Teklif &amp; danışma</span><h2>Bu konuda teklif veya teknik görüş almak ister misiniz?</h2><p>Sahanızı ve hedeflerinizi anlatın; uzman ekibimiz ekipman, süre ve maliyet içeren net bir teklif hazırlasın.</p></div>
+<div class="zt-cta__actions">
+<a class="zt-cta__phone" href="tel:+902164895277"><i class="fas fa-phone-alt"></i> +90 216 489 52 77</a>
+<a class="zt-btn zt-btn--primary zt-btn--lg" href="../../iletisim/index.html">Teklif Formu <i class="fas fa-arrow-right"></i></a>
+</div>
+</div>
+</section><footer class="zt-footer">
+<div class="zt-footer__inner">
+<div class="zt-footer__brand">
+<img alt="Zemin Teknik" src="../../images/header-logo.png"/>
+<p>2007 yılında kurulan Zemin Teknik; zemin etütleri, deniz etütleri ve jeolojik-jeoteknik araştırmalarda karada ve denizde, yurt içi ve uluslararası projelerde kapsamlı saha araştırma çözümleri sunar. Türkiye'nin ilk ruhsatlı sondaj gemisinin sahibidir.</p>
+<div class="zt-footer__social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/zt-zemi̇n-tekni̇k" rel="noopener" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+<a aria-label="Instagram" href="https://www.instagram.com/zeminteknik" rel="noopener" target="_blank"><i class="fab fa-instagram"></i></a>
+<a aria-label="YouTube" href="https://www.youtube.com/@ZeminTeknik" rel="noopener" target="_blank"><i class="fab fa-youtube"></i></a>
+<a aria-label="Facebook" href="https://www.facebook.com/p/Zemin-Teknik-100057754535914/?locale=tr_TR" rel="noopener" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a aria-label="WhatsApp" href="https://wa.me/905322097496" rel="noopener" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</div>
+</div>
+<div><h4>Kurumsal</h4><ul><li><a href="../../kurumsal/hakkimizda/index.html">Hakkımızda</a></li><li><a href="../../kurumsal/tarihce/index.html">Tarihçe</a></li><li><a href="../../kurumsal/vizyon/index.html">Vizyon &amp; Misyon</a></li><li><a href="../../kurumsal/sertifikalar/index.html">Sertifikalar</a></li><li><a href="../../kurumsal/kariyer/index.html">Kariyer</a></li><li><a href="../../projeler/index.html">Projeler</a></li><li><a href="../../blog/index.html">Blog</a></li></ul></div>
+<div><h4>Hizmetler</h4><ul><li><a href="../../hizmetler/deniz-sondaj-hizmetleri/index.html">Deniz Sondaj Hizmetleri</a></li><li><a href="../../hizmetler/kara-sondaj-hizmetleri/index.html">Kara Sondaj Hizmetleri</a></li><li><a href="../../hizmetler/deniz-dip-tarama/index.html">Deniz Dibi Numune Alımı</a></li><li><a href="../../hizmetler/batimetrik-haritalama/index.html">Batimetrik Haritalama</a></li><li><a href="../../hizmetler/yer-radari-gpr-uygulamalari/index.html">Yer Radarı (GPR) Uygulamaları</a></li><li><a href="../../hizmetler/sismik-risk-zemin-analizleri/index.html">Sismik Risk &amp; Zemin Dinamik Analizleri</a></li><li><a href="../../hizmetler/raporlama-danismanlik/index.html">Raporlama &amp; Danışmanlık</a></li><li><a href="../../hizmetler/su-kuyusu-acimi/index.html">Su Kuyusu Açımı</a></li></ul></div>
+<div><h4>İletişim</h4><ul>
+<li><a href="https://maps.google.com/?q=İdealtepe+Mh.+Rıfkı+Tongsir+Cd.+No:30+Maltepe+İstanbul" rel="noopener" target="_blank"><i class="fas fa-map-marker-alt"></i><span>İdealtepe Mh. Rıfkı Tongsir Cd. No: 30 D: 8<br/>Maltepe / İstanbul</span></a></li>
+<li><a href="tel:+902164895277"><i class="fas fa-phone-alt"></i><span>+90 216 489 52 77</span></a></li>
+<li><a href="https://wa.me/905322097496" rel="noopener" target="_blank"><i class="fab fa-whatsapp"></i><span>+90 532 209 74 96</span></a></li>
+<li><a href="mailto:bilgi@zeminteknik.com"><i class="fas fa-envelope"></i><span>bilgi@zeminteknik.com</span></a></li>
+<li><a><i class="fas fa-clock"></i><span>Hafta içi 09:00 – 17:00</span></a></li>
+</ul></div>
+</div>
+<div class="zt-footer__bottom"><div class="zt-footer__bottom-inner">
+<span>© <span data-year="">2025</span> ZT Zemin Teknik Zemin Etüdü Müh. ve İnş. Tic. Ltd. Şti. Tüm hakları saklıdır.</span>
+<nav><a href="../../kurumsal/sertifikalar/index.html">Kalite Politikası</a><a href="../../kurumsal/kariyer/index.html">Kariyer</a><a href="https://www.linkedin.com/in/ahmetmustafayilmaz/" rel="noopener noreferrer" target="_blank">Created by AMY</a></nav>
+</div></div>
+</footer><a aria-label="WhatsApp ile yazın" class="whatsapp-float" href="https://wa.me/905322097496" rel="noopener" target="_blank"><i class="fab fa-whatsapp"></i></a><script>
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenuDrawer = document.getElementById('mobileMenuDrawer');
+        const closeMobileMenu = document.getElementById('closeMobileMenu');
+
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenuDrawer.classList.remove('hidden');
+        });
+
+        closeMobileMenu.addEventListener('click', function() {
+            mobileMenuDrawer.classList.add('hidden');
+        });
+
+        // Close mobile menu when clicking outside
+        mobileMenuDrawer.addEventListener('click', function(e) {
+            if (e.target === mobileMenuDrawer) {
+                mobileMenuDrawer.classList.add('hidden');
+            }
+        });
+
+        // Mobile dropdown functionality
+        document.querySelectorAll('.mobile-dropdown-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-target');
+                const targetMenu = document.getElementById(targetId);
+                const icon = this.querySelector('i');
+                
+                // Close other dropdowns
+                document.querySelectorAll('.mobile-dropdown-btn').forEach(btn => {
+                    if (btn !== this) {
+                        const otherTargetId = btn.getAttribute('data-target');
+                        const otherMenu = document.getElementById(otherTargetId);
+                        if (otherMenu) {
+                            otherMenu.classList.add('hidden');
+                            btn.classList.remove('active');
+                            btn.querySelector('i').classList.remove('rotate-180');
+                        }
+                    }
+                });
+                
+                // Toggle current dropdown
+                targetMenu.classList.toggle('hidden');
+                this.classList.toggle('active');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Mobile sub-dropdown functionality
+        document.querySelectorAll('.mobile-sub-dropdown-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-target');
+                const targetMenu = document.getElementById(targetId);
+                const icon = this.querySelector('i');
+                
+                // Close other sub-dropdowns
+                document.querySelectorAll('.mobile-sub-dropdown-btn').forEach(btn => {
+                    if (btn !== this) {
+                        const otherTargetId = btn.getAttribute('data-target');
+                        const otherMenu = document.getElementById(otherTargetId);
+                        if (otherMenu) {
+                            otherMenu.classList.add('hidden');
+                            btn.classList.remove('active');
+                            btn.querySelector('i').classList.remove('rotate-90');
+                        }
+                    }
+                });
+                
+                // Toggle current sub-dropdown
+                targetMenu.classList.toggle('hidden');
+                this.classList.toggle('active');
+                icon.classList.toggle('rotate-90');
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            var header = document.getElementById('mainHeader');
+            if (window.scrollY > 30) {
+                header.classList.add('bg-blue-900', 'shadow-xl', 'border-b', 'border-blue-800');
+                header.classList.remove('bg-white');
+            } else {
+                header.classList.remove('bg-blue-900', 'shadow-xl', 'border-b', 'border-blue-800');
+                header.classList.add('bg-white');
+            }
+        });
+    </script><script src="../../js/zt.js"></script></body>
+</html> 

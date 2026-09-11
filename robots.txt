@@ -1,0 +1,60 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.zeminteknik.com/sitemap.xml
+
+# Crawl-delay (isteğe bağlı - sunucu yükünü azaltmak için)
+Crawl-delay: 1
+
+# Özel dizinler için kurallar
+Allow: /images/
+Allow: /css/
+Allow: /js/
+Allow: /videos/
+
+# Admin veya özel dizinler (varsa)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /backup/
+
+# Dosya uzantıları
+Allow: /*.html$
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.webp$
+Allow: /*.svg$
+Allow: /*.ico$
+Allow: /*.pdf$
+
+# Google özel kuralları
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.webp$
+
+User-agent: Googlebot-Mobile
+Allow: /
+
+# Bing özel kuralları
+User-agent: Bingbot
+Allow: /
+
+# Yandex özel kuralları
+User-agent: Yandex
+Allow: /
+
+# DuckDuckBot özel kuralları
+User-agent: DuckDuckBot
+Allow: / 

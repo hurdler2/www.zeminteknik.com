@@ -1,0 +1,93 @@
+/* Ana sayfaya özel stiller. Genel tasarım sistemi: css/zt-corporate.css */
+
+.hero-section {
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+.animate-slideIn {
+  animation: slideIn 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* Mobil menü iyileştirmeleri */
+@media (max-width: 768px) {
+  .mobile-dropdown-btn,
+  .mobile-sub-dropdown-btn {
+    min-height: 44px;
+    touch-action: manipulation;
+  }
+  .mobile-dropdown-btn i,
+  .mobile-sub-dropdown-btn i {
+    transition: transform 0.2s ease;
+  }
+
+  /* Mobilde arka plan videosu daha geniş ve tam ortalı olsun */
+  .hero-section video {
+    min-width: 100vw !important;
+    min-height: 100vh !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) scale(1.15) !important;
+    position: absolute !important;
+    z-index: 0;
+  }
+  .hero-section {
+    overflow: hidden !important;
+  }
+}
+
+/* Dil seçici */
+#custom-lang-select {
+  direction: ltr;
+}
+#custom-lang-select option {
+  direction: ltr;
+  text-align: left;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+select::-ms-expand {
+  display: none;
+}
+#custom-lang-select {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 16px;
+  padding-right: 30px;
+}
+
+/* Referans logoları kayan şerit */
+.marquee-track {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.marquee-inner {
+  display: flex;
+  gap: 3rem;
+  width: max-content;
+  will-change: transform;
+}
+
+/* Safari için workflow diagram düzeltmeleri */
+@supports (-webkit-appearance: none) {
+  .workflow-step,
+  .workflow-container {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}

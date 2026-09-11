@@ -1,0 +1,142 @@
+# Zemin Teknik - .htaccess Dosyası
+# Apache Web Sunucusu Yapılandırması
+
+# Güvenlik Ayarları
+# =================
+
+# Dizin listelemesini kapat
+Options -Indexes
+
+# Güvenlik başlıkları
+<IfModule mod_headers.c>
+    # XSS koruması
+    Header always set X-XSS-Protection "1; mode=block"
+    
+    # Clickjacking koruması
+    Header always set X-Frame-Options "SAMEORIGIN"
+    
+    # MIME type sniffing koruması
+    Header always set X-Content-Type-Options "nosniff"
+    
+    # Referrer Policy
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Dosya erişim kısıtlamaları
+<Files "*.htaccess">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files "*.log">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Performans Optimizasyonları
+# ===========================
+
+# Gzip sıkıştırma
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/json
+</IfModule>
+
+# Browser caching
+<IfModule mod_expires.c>
+    ExpiresActive On
+    
+    # Resimler
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/webp "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+    ExpiresByType image/x-icon "access plus 1 year"
+    
+    # Video dosyaları
+    ExpiresByType video/mp4 "access plus 1 month"
+    ExpiresByType video/webm "access plus 1 month"
+    
+    # CSS ve JavaScript
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType application/x-javascript "access plus 1 month"
+    
+    # HTML
+    ExpiresByType text/html "access plus 1 day"
+    
+    # Fontlar
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType application/font-woff "access plus 1 year"
+    ExpiresByType application/font-woff2 "access plus 1 year"
+</IfModule>
+
+# URL Yeniden Yazma Kuralları
+# ===========================
+
+RewriteEngine On
+RewriteBase /
+
+# www ve https yönlendirmesi
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Eğer istenen dosya veya dizin yoksa, index.html'ye yönlendir
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)/$ /$1/index.html [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)$ /$1/index.html [L]
+
+# Ana sayfa
+RewriteRule ^$ index.html [L]
+
+# 404 hata sayfası
+ErrorDocument 404 /404.html
+
+# 500 hata sayfası
+ErrorDocument 500 /404.html
+
+# 403 hata sayfası
+ErrorDocument 403 /404.html
+
+# MIME Türleri
+# ============
+
+# WebP desteği
+AddType image/webp .webp
+
+# Font dosyaları
+AddType application/font-woff .woff
+AddType application/font-woff2 .woff2
+AddType application/x-font-ttf .ttf
+AddType application/vnd.ms-fontobject .eot
+
+# Video dosyaları
+AddType video/mp4 .mp4
+AddType video/webm .webm
+
+# Manifest dosyası
+AddType application/manifest+json .webmanifest
+
+# Karakter Kodlaması
+# ==================
+
+AddDefaultCharset UTF-8
+
+# Son Güncelleme: 2024
+# Zemin Teknik Web Sitesi için özel olarak hazırlanmıştır. 

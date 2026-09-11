@@ -1,0 +1,10 @@
+# Yerel/işletim sistemi artıkları
+.DS_Store
+__MACOSX/
+Thumbs.db
+
+# Arşivler ve yayın paketleri
+*.zip
+
+# Boş hosting klasörü
+cgi-bin/

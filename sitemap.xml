@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+         xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    
+    <!-- Ana Sayfa -->
+    <url>
+        <loc>https://www.zeminteknik.com/</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://www.zeminteknik.com/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.zeminteknik.com/en/"/>
+    </url>
+    
+    <!-- İngilizce Ana Sayfa -->
+    <url>
+        <loc>https://www.zeminteknik.com/en/</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://www.zeminteknik.com/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.zeminteknik.com/en/"/>
+    </url>
+    
+    <!-- Kurumsal Sayfaları -->
+    <url>
+        <loc>https://www.zeminteknik.com/kurumsal/hakkimizda/</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.zeminteknik.com/kurumsal/tarihce/</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.zeminteknik.com/kurumsal/vizyon/</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.zeminteknik.com/kurumsal/sertifikalar/</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.zeminteknik.com/kurumsal/kariyer/</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Hizmetler Sayfaları -->
+    <url>
+        <loc>https://www.zeminteknik.com/hizmetler/deniz-sondaj-hizmetleri/</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.zeminteknik.com/hizmetler/kara-sondaj-hizmetleri/</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.zeminteknik.com/hizmetler/deniz-dip-tarama/</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.zeminteknik.com/hizmetler/batimetrik-haritalama/</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.zeminteknik.com/hizmetler/yer-radari-gpr-uygulamalari/</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.zeminteknik.com/hizmetler/sismik-risk-zemin-analizleri/</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.zeminteknik.com/hizmetler/raporlama-danismanlik/</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.zeminteknik.com/hizmetler/su-kuyusu-acimi/</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Ekipmanlar Sayfaları -->
+    <url>
+        <loc>https://www.zeminteknik.com/ekipmanlar/erd-sondaj-makinesi/</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.zeminteknik.com/ekipmanlar/ruhsatli-sondaj-gemisi/</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.zeminteknik.com/ekipmanlar/yuzer-platform/</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.zeminteknik.com/ekipmanlar/nwg-karotiyerli-sondaj-makinesi/</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.zeminteknik.com/ekipmanlar/grab-box-corer/</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.zeminteknik.com/ekipmanlar/elektrik-rezistivite-gpr/</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.zeminteknik.com/ekipmanlar/mobil-bot-tekne/</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.zeminteknik.com/ekipmanlar/presiyometre-cihazi/</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Batimetrik Cihazlar -->
+    <url>
+        <loc>https://www.zeminteknik.com/ekipmanlar/batimetrik-cihazlar/single-beam-ekolot/</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.zeminteknik.com/ekipmanlar/batimetrik-cihazlar/multi-beam-ekolot/</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.zeminteknik.com/ekipmanlar/batimetrik-cihazlar/gnss-rtk-gps-sistemi/</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <!-- Sismik Cihazlar -->
+    <url>
+        <loc>https://www.zeminteknik.com/ekipmanlar/sismik-cihazlar/masw/</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.zeminteknik.com/ekipmanlar/sismik-cihazlar/mikrotremor/</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.zeminteknik.com/ekipmanlar/sismik-cihazlar/kuyu-ici-sismik/</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <!-- Projeler -->
+    <url>
+        <loc>https://www.zeminteknik.com/projeler/</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Blog -->
+    <url>
+        <loc>https://www.zeminteknik.com/blog/</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- İletişim -->
+    <url>
+        <loc>https://www.zeminteknik.com/iletisim/</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+</urlset> 

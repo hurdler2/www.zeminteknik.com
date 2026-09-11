@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Blog & Sıkça Sorulan Sorular | Zemin Teknik</title>
+<meta content="Zemin Teknik blog yazıları, sektörel haberler ve teknik makaleler." name="description"/>
+
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="../images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="../images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../images/site.webmanifest" rel="manifest"/>
+<link href="../images/android-chrome-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<link href="../images/android-chrome-512x512.png" rel="icon" sizes="512x512" type="image/png"/>
+<style>
+        body { font-family: 'Inter', sans-serif; color: #333; overflow-x: hidden;  }
+        @media (max-width: 768px) { body { zoom: 1 !important; -moz-transform: scale(1) !important; } }
+        h1, h2, h3, h4, .heading-font { font-family: 'Archivo', sans-serif; font-weight: 900; letter-spacing: 0; text-transform: uppercase; }
+        #mainHeader.bg-blue-900 { background-color: #ffffff !important; }
+    </style>
+
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=Inter:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap" rel="stylesheet"/><link href="../css/zt.css" rel="stylesheet"/></head>
+<body class="bg-gray-50"><div class="zt-topbar">
+<div class="zt-topbar__inner">
+<div class="zt-topbar__meta">
+<a href="tel:+902164895277"><i class="fas fa-phone-alt"></i> +90 216 489 52 77</a>
+<a href="mailto:bilgi@zeminteknik.com"><i class="fas fa-envelope"></i> bilgi@zeminteknik.com</a>
+<span><i class="fas fa-map-marker-alt"></i> Maltepe / İstanbul</span>
+<span><i class="fas fa-clock"></i> Hafta içi 09:00 – 17:00</span>
+</div>
+<div class="zt-topbar__social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/zt-zemi̇n-tekni̇k" rel="noopener" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+<a aria-label="Instagram" href="https://www.instagram.com/zeminteknik" rel="noopener" target="_blank"><i class="fab fa-instagram"></i></a>
+<a aria-label="YouTube" href="https://www.youtube.com/@ZeminTeknik" rel="noopener" target="_blank"><i class="fab fa-youtube"></i></a>
+<a aria-label="Facebook" href="https://www.facebook.com/p/Zemin-Teknik-100057754535914/?locale=tr_TR" rel="noopener" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a aria-label="WhatsApp" href="https://wa.me/905322097496" rel="noopener" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<span class="zt-topbar__lang"><i class="fas fa-globe"></i> TR</span>
+</div>
+</div>
+</div><header class="zt-header" id="mainHeader">
+<div class="zt-header__inner">
+<a aria-label="Zemin Teknik ana sayfa" class="zt-logo" href="../index.html"><img alt="Zemin Teknik" src="../images/header-logo.png"/></a>
+<nav aria-label="Ana menü" class="zt-nav">
+<a href="../index.html">Ana Sayfa</a>
+<div class="zt-nav__item"><a href="../kurumsal/hakkimizda/index.html">Kurumsal <i class="fas fa-chevron-down"></i></a>
+<div class="zt-dropdown"><a href="../kurumsal/hakkimizda/index.html">Hakkımızda</a>
+<a href="../kurumsal/tarihce/index.html">Tarihçe</a>
+<a href="../kurumsal/vizyon/index.html">Vizyon &amp; Misyon</a>
+<a href="../kurumsal/sertifikalar/index.html">Sertifikalar</a>
+<a href="../kurumsal/kariyer/index.html">Kariyer</a></div></div>
+<div class="zt-nav__item"><a href="../hizmetler/deniz-sondaj-hizmetleri/index.html">Hizmetler <i class="fas fa-chevron-down"></i></a>
+<div class="zt-dropdown"><a href="../hizmetler/deniz-sondaj-hizmetleri/index.html">Deniz Sondaj Hizmetleri</a>
+<a href="../hizmetler/kara-sondaj-hizmetleri/index.html">Kara Sondaj Hizmetleri</a>
+<a href="../hizmetler/deniz-dip-tarama/index.html">Deniz Dibi Numune Alımı</a>
+<a href="../hizmetler/batimetrik-haritalama/index.html">Batimetrik Haritalama</a>
+<a href="../hizmetler/yer-radari-gpr-uygulamalari/index.html">Yer Radarı (GPR) Uygulamaları</a>
+<a href="../hizmetler/sismik-risk-zemin-analizleri/index.html">Sismik Risk &amp; Zemin Dinamik Analizleri</a>
+<a href="../hizmetler/raporlama-danismanlik/index.html">Raporlama &amp; Danışmanlık</a>
+<a href="../hizmetler/su-kuyusu-acimi/index.html">Su Kuyusu Açımı</a></div></div>
+<div class="zt-nav__item"><a href="../ekipmanlar/ruhsatli-sondaj-gemisi/index.html">Ekipmanlar <i class="fas fa-chevron-down"></i></a>
+<div class="zt-dropdown zt-dropdown--mega">
+<div><div class="zt-dropdown__group">Sondaj &amp; saha</div><a href="../ekipmanlar/erd-sondaj-makinesi/index.html">ERD Sondaj Makinesi</a>
+<a href="../ekipmanlar/ruhsatli-sondaj-gemisi/index.html">Ruhsatlı Sondaj Gemisi</a>
+<a href="../ekipmanlar/yuzer-platform/index.html">Yüzer Platform (Duba)</a>
+<a href="../ekipmanlar/nwg-karotiyerli-sondaj-makinesi/index.html">NWG Karotiyerli Sondaj Makinesi</a>
+<a href="../ekipmanlar/grab-box-corer/index.html">Grab &amp; Box Corer</a>
+<a href="../ekipmanlar/elektrik-rezistivite-gpr/index.html">Elektrik Rezistivite &amp; GPR</a>
+<a href="../ekipmanlar/mobil-bot-tekne/index.html">Mobil Bot (Tekne)</a>
+<a href="../ekipmanlar/presiyometre-cihazi/index.html">Presiyometre Cihazı</a></div>
+<div><div class="zt-dropdown__group">Batimetrik cihazlar</div><a href="../ekipmanlar/batimetrik-cihazlar/single-beam-ekolot/index.html">Single Beam Ekolot</a>
+<a href="../ekipmanlar/batimetrik-cihazlar/multi-beam-ekolot/index.html">Multi Beam Ekolot</a>
+<a href="../ekipmanlar/batimetrik-cihazlar/gnss-rtk-gps-sistemi/index.html">GNSS RTK GPS Sistemi</a><div class="zt-dropdown__group" style="margin-top:.5rem">Sismik cihazlar</div><a href="../ekipmanlar/sismik-cihazlar/masw/index.html">MASW</a>
+<a href="../ekipmanlar/sismik-cihazlar/mikrotremor/index.html">Mikrotremör</a>
+<a href="../ekipmanlar/sismik-cihazlar/kuyu-ici-sismik/index.html">Kuyu İçi Sismik</a></div>
+</div></div>
+<a href="../projeler/index.html">Projeler</a>
+<a href="../blog/index.html">Blog</a>
+<a href="../iletisim/index.html">İletişim</a>
+</nav>
+<div class="zt-header__cta"><a class="zt-btn zt-btn--primary zt-btn--sm" href="../iletisim/index.html"><i class="fas fa-file-signature"></i> Teklif Al</a></div>
+<button aria-label="Menüyü aç" class="zt-burger" id="mobileMenuBtn"><span></span><span></span><span></span></button>
+</div>
+</header>
+<div class="zt-drawer hidden" id="mobileMenuDrawer">
+<div class="zt-drawer__panel">
+<div class="zt-drawer__top"><img alt="Zemin Teknik" src="../images/header-logo.png"/><button aria-label="Menüyü kapat" id="closeMobileMenu"><i class="fas fa-times"></i></button></div>
+<a class="zt-drawer__link" href="../index.html">Ana Sayfa</a>
+<button class="mobile-dropdown-btn" data-target="kurumsalMenu">Kurumsal <i class="fas fa-chevron-down"></i></button>
+<div class="zt-drawer__sub hidden" id="kurumsalMenu"><a href="../kurumsal/hakkimizda/index.html">Hakkımızda</a>
+<a href="../kurumsal/tarihce/index.html">Tarihçe</a>
+<a href="../kurumsal/vizyon/index.html">Vizyon &amp; Misyon</a>
+<a href="../kurumsal/sertifikalar/index.html">Sertifikalar</a>
+<a href="../kurumsal/kariyer/index.html">Kariyer</a></div>
+<button class="mobile-dropdown-btn" data-target="hizmetlerMenu">Hizmetler <i class="fas fa-chevron-down"></i></button>
+<div class="zt-drawer__sub hidden" id="hizmetlerMenu"><a href="../hizmetler/deniz-sondaj-hizmetleri/index.html">Deniz Sondaj Hizmetleri</a>
+<a href="../hizmetler/kara-sondaj-hizmetleri/index.html">Kara Sondaj Hizmetleri</a>
+<a href="../hizmetler/deniz-dip-tarama/index.html">Deniz Dibi Numune Alımı</a>
+<a href="../hizmetler/batimetrik-haritalama/index.html">Batimetrik Haritalama</a>
+<a href="../hizmetler/yer-radari-gpr-uygulamalari/index.html">Yer Radarı (GPR) Uygulamaları</a>
+<a href="../hizmetler/sismik-risk-zemin-analizleri/index.html">Sismik Risk &amp; Zemin Dinamik Analizleri</a>
+<a href="../hizmetler/raporlama-danismanlik/index.html">Raporlama &amp; Danışmanlık</a>
+<a href="../hizmetler/su-kuyusu-acimi/index.html">Su Kuyusu Açımı</a></div>
+<button class="mobile-dropdown-btn" data-target="ekipmanlarMenu">Ekipmanlar <i class="fas fa-chevron-down"></i></button>
+<div class="zt-drawer__sub hidden" id="ekipmanlarMenu"><a href="../ekipmanlar/erd-sondaj-makinesi/index.html">ERD Sondaj Makinesi</a>
+<a href="../ekipmanlar/ruhsatli-sondaj-gemisi/index.html">Ruhsatlı Sondaj Gemisi</a>
+<a href="../ekipmanlar/yuzer-platform/index.html">Yüzer Platform (Duba)</a>
+<a href="../ekipmanlar/nwg-karotiyerli-sondaj-makinesi/index.html">NWG Karotiyerli Sondaj Makinesi</a>
+<a href="../ekipmanlar/grab-box-corer/index.html">Grab &amp; Box Corer</a>
+<a href="../ekipmanlar/elektrik-rezistivite-gpr/index.html">Elektrik Rezistivite &amp; GPR</a>
+<a href="../ekipmanlar/mobil-bot-tekne/index.html">Mobil Bot (Tekne)</a>
+<a href="../ekipmanlar/presiyometre-cihazi/index.html">Presiyometre Cihazı</a>
+<button class="mobile-sub-dropdown-btn" data-target="batimetrikMobileMenu" type="button">Batimetrik Cihazlar <i class="fas fa-chevron-down"></i></button>
+<div class="zt-drawer__sub hidden" id="batimetrikMobileMenu"><a href="../ekipmanlar/batimetrik-cihazlar/single-beam-ekolot/index.html">Single Beam Ekolot</a>
+<a href="../ekipmanlar/batimetrik-cihazlar/multi-beam-ekolot/index.html">Multi Beam Ekolot</a>
+<a href="../ekipmanlar/batimetrik-cihazlar/gnss-rtk-gps-sistemi/index.html">GNSS RTK GPS Sistemi</a></div>
+<button class="mobile-sub-dropdown-btn" data-target="sismikMobileMenu" type="button">Sismik Cihazlar <i class="fas fa-chevron-down"></i></button>
+<div class="zt-drawer__sub hidden" id="sismikMobileMenu"><a href="../ekipmanlar/sismik-cihazlar/masw/index.html">MASW</a>
+<a href="../ekipmanlar/sismik-cihazlar/mikrotremor/index.html">Mikrotremör</a>
+<a href="../ekipmanlar/sismik-cihazlar/kuyu-ici-sismik/index.html">Kuyu İçi Sismik</a></div>
+</div>
+<a class="zt-drawer__link" href="../projeler/index.html">Projeler</a>
+<a class="zt-drawer__link" href="../blog/index.html">Blog</a>
+<a class="zt-drawer__link" href="../iletisim/index.html">İletişim</a>
+<div class="zt-drawer__cta"><a class="zt-btn zt-btn--primary" href="../iletisim/index.html">Teklif Al</a><a class="zt-btn zt-btn--outline" href="tel:+902164895277"><i class="fas fa-phone-alt"></i> +90 216 489 52 77</a></div>
+<div class="zt-drawer__meta"><span><i class="fas fa-envelope"></i> bilgi@zeminteknik.com</span><span><i class="fas fa-map-marker-alt"></i> İdealtepe Mh. Rıfkı Tongsir Cd. No:30 D:8 Maltepe / İstanbul</span></div>
+</div>
+</div><section class="zt-page-hero">
+<div class="zt-page-hero__inner">
+<div><nav aria-label="Sayfa yolu" class="zt-crumbs"><a href="../index.html">Ana Sayfa</a><i class="fas fa-chevron-right"></i><span>Blog</span><i class="fas fa-chevron-right"></i><span>Blog &amp; Sıkça Sorulan Sorular</span></nav><h1>Blog &amp; Sıkça Sorulan Sorular</h1><p class="zt-page-hero__lead">Sondaj teknolojileri, jeofizik yöntemler ve sektörden güncel içerikler.</p></div>
+<div class="zt-page-hero__side"><span><b>Bilgi merkezi</b></span><span>ZT · 2007'den beri</span></div>
+</div>
+</section><div class="zt-content"><section class="py-24 bg-gradient-to-br from-blue-50 via-white to-blue-100 relative overflow-hidden" data-aos="fade-up">
+
+<div class="relative z-10 max-w-screen-2xl mx-auto px-2">
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 blog-masonry">
+
+<div class="group relative blog-card bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col h-full min-h-[420px] hover:-translate-y-1 transition-transform border-4">
+<div class="relative h-64 overflow-hidden">
+<img alt="Petrol Sondajı" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" src="../images/presiyometre.jpg"/>
+<div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center text-sm text-gray-500 mb-2"><i class="fas fa-calendar-alt mr-2"></i>2 Haziran 2023 <span class="mx-2">•</span> 3 dk okuma</div>
+<h3 class="text-lg font-bold text-gray-700 mb-2 heading-font group-hover:text-orange-500 transition">Presiyometre Deneyi</h3>
+<p class="text-gray-700 mb-2">Bu testte, yer altında açılan bir deliğe özel bir balon yerleştirilir ve şişirilerek zeminin ne kadar
+                        genişlediği ölçülür. Prensibi çok basit: zemin, yük altındaki davranışını doğrudan bu şişme miktarıyla
+                        gösterir. Bu deneyle zeminin taşıma gücü ve deformasyon özellikleri belirlenir. Özellikle yüksek yük
+                        taşıyacak temellerde tercih edilir.</p>
+</div>
+<div class="flex items-center gap-3 mt-2">
+<img alt="Yazar" class="w-8 h-8 rounded-full border-2 border-blue-500 object-cover" src="../images/team.jpeg"/>
+<span class="text-gray-700 font-semibold text-sm">ZT Blog</span>
+</div>
+<a class="mt-2 text-gray-700 text-sm font-medium underline underline-offset-2 hover:text-orange-600 transition cursor-pointer" href="#">Detaylı Bilgi</a>
+</div>
+</div>
+
+<div class="group relative blog-card rounded-3xl shadow-2xl overflow-hidden flex flex-col h-full min-h-[420px] hover:-translate-y-1 transition-transform border-4">
+<div class="relative h-64 overflow-hidden">
+<img alt="Petrol Sondajı" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" src="../images/masw.jpeg"/>
+<div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none;"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center text-sm text-gray-500 mb-2"><i class="fas fa-calendar-alt mr-2"></i>2 Haziran 2023 <span class="mx-2">•</span> 2 dk okuma</div>
+<h3 class="text-lg font-bold text-gray-700 mb-2 heading-font group-hover:text-orange-500 transition">MASW (Çok Kanallı Yüzey Dalgası Yöntemi)</h3>
+<p class="text-gray-700 mb-2">MASW, zemine verilen yapay titreşimlerin yayılma hızını ölçerek yer altı katmanlarını analiz eder. Temel
+                    prensibi şudur: Dalga, yumuşak zeminde yavaş, sert zeminde hızlı yayılır. Bu hız farkları sayesinde
+                    katman kalınlığı ve zemin sınıfı belirlenir. Deprem etkilerine karşı zemin davranışını anlamakta çok
+                    kullanılır.</p>
+</div>
+<div class="flex items-center gap-3 mt-2">
+<img alt="Yazar" class="w-8 h-8 rounded-full border-2 border-blue-500 object-cover" src="../images/team.jpeg"/>
+<span class="text-gray-700 font-semibold text-sm">ZT Blog</span>
+</div>
+<a class="mt-2 text-gray-700 text-sm font-medium underline underline-offset-2 hover:text-orange-600 transition cursor-pointer" href="#">Detaylı Bilgi</a>
+</div>
+</div>
+
+<div class="group relative blog-card rounded-3xl shadow-2xl overflow-hidden flex flex-col h-full min-h-[420px] hover:-translate-y-1 transition-transform border-4">
+<div class="relative h-64 overflow-hidden">
+<img alt="Petrol Sondajı" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" src="../images/mikrotremor.jpeg"/>
+<div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none;"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center text-sm text-gray-500 mb-2"><i class="fas fa-calendar-alt mr-2"></i>2 Haziran 2023 <span class="mx-2">•</span> 3 dk okuma</div>
+<h3 class="text-lg font-bold text-gray-700 mb-2 heading-font group-hover:text-orange-500 transition">Mikrotremör Ölçümü</h3>
+<p class="text-gray-700 mb-2">Mikrotremör, zeminin doğal olarak sürekli titreştiği, insan kulağının duyamayacağı düzeydeki küçük
+                    sarsıntılardır. Bu yöntemde, herhangi bir dış kuvvet uygulamadan, sadece doğadaki titreşimleri ölçeriz.
+                    Prensip olarak, zeminin kendi doğal frekansını belirlemeyi amaçlar. Özellikle yapı-zemin etkileşimini ve
+                    deprem rezonansını değerlendirmede çok etkilidir.</p>
+</div>
+<div class="flex items-center gap-3 mt-2">
+<img alt="Yazar" class="w-8 h-8 rounded-full border-2 border-blue-500 object-cover" src="../images/team.jpeg"/>
+<span class="text-gray-700 font-semibold text-sm">ZT Blog</span>
+</div>
+<a class="mt-2 text-gray-700 text-sm font-medium underline underline-offset-2 hover:text-orange-600 transition cursor-pointer" href="#">Detaylı Bilgi</a>
+</div>
+</div>
+
+<div class="group relative blog-card rounded-3xl shadow-xl overflow-hidden flex flex-col h-full min-h-[420px] hover:-translate-y-1 transition-transform border-4">
+<div class="relative h-64 overflow-hidden">
+<img alt="Çevre ve Sürdürülebilirlik" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" src="../images/cpt.jpg"/>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center text-sm text-gray-500 mb-2"><i class="fas fa-calendar-alt mr-2"></i>10 Nisan 2023 <span class="mx-2">•</span> 2 dk okuma</div>
+<h3 class="text-lg font-bold text-gray-700 mb-2 heading-font group-hover:text-orange-500 transition">CPT (Koni Penetrasyon Testi)</h3>
+<p class="text-gray-700 mb-2">Bu yöntemde zemine çelik bir koni bastırılarak ilerlenir ve koninin karşılaştığı direnç sürekli olarak
+                    ölçülür. Sarsıntısız ve çok hassas bir testtir. Zemin geçişleri, katman kalınlıkları ve taşıma gücü hakkında
+                    anlık ve ayrıntılı bilgi verir. Özellikle dolgu alanlarındaki belirsizliği gidermede etkilidir.</p>
+</div>
+<div class="flex items-center gap-3 mt-2">
+<img alt="Yazar" class="w-8 h-8 rounded-full border-2 border-green-600 object-cover" src="../images/team.jpeg"/>
+<span class="text-gray-700 font-semibold text-sm">ZT Blog</span>
+</div>
+<a class="mt-2 text-gray-700 text-sm font-medium underline underline-offset-2 hover:text-orange-600 transition cursor-pointer" href="#">Detaylı Bilgi</a>
+</div>
+</div>
+
+<div class="group relative blog-card rounded-3xl shadow-xl overflow-hidden flex flex-col h-full min-h-[420px] hover:-translate-y-1 transition-transform border-4">
+<div class="relative h-64 overflow-hidden">
+<img alt="Çevre ve Sürdürülebilirlik" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" src="../images/sismik.jpg"/>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center text-sm text-gray-500 mb-2"><i class="fas fa-calendar-alt mr-2"></i>10 Nisan 2023 <span class="mx-2">•</span> 2 dk okuma</div>
+<h3 class="text-lg font-bold text-gray-700 mb-2 heading-font group-hover:text-orange-500 transition">Kuyu İçi Sismik (Downhole – Crosshole)</h3>
+<p class="text-gray-700 mb-2">Zemindeki sismik dalgaların (P ve S dalgaları) ne kadar hızlı hareket ettiğini ölçerek zemin türünü
+                    belirleriz. Hız ne kadar fazlaysa, zemin o kadar sağlamdır. Bu ölçümler için genellikle daha önceden
+                    açılmış sondaj kuyuları kullanılır. Deprem mühendisliği projelerinde kritik veriler sağlar.</p>
+</div>
+<div class="flex items-center gap-3 mt-2">
+<img alt="Yazar" class="w-8 h-8 rounded-full border-2 border-green-600 object-cover" src="../images/team.jpeg"/>
+<span class="text-gray-700 font-semibold text-sm">ZT Blog</span>
+</div>
+<a class="mt-2 text-gray-700 text-sm font-medium underline underline-offset-2 hover:text-orange-600 transition cursor-pointer" href="#">Detaylı Bilgi</a>
+</div>
+</div>
+
+<div class="group relative blog-card rounded-3xl shadow-2xl overflow-hidden flex flex-col h-full min-h-[420px] hover:-translate-y-1 transition-transform border-4">
+<div class="relative h-64 overflow-hidden">
+<img alt="Petrol Sondajı" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" src="../images/rezistivite.jpg"/>
+<div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none;"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center text-sm text-gray-500 mb-2"><i class="fas fa-calendar-alt mr-2"></i>2 Haziran 2023 <span class="mx-2">•</span> 2 dk okuma</div>
+<h3 class="text-lg font-bold text-gray-700 mb-2 heading-font group-hover:text-orange-500 transition">Elektrik Rezistivite (ERT)</h3>
+<p class="text-gray-700 mb-2">Bu yöntemde yere elektrotlar yerleştirip elektrik akımı verilir ve zeminin bu akıma gösterdiği direnç
+                        ölçülür. Her zemin türü farklı direnç gösterdiği için, yer altı haritası çıkarılır. Suya doygun zeminler, kuru
+                        kayalar ya da dolgu alanları bu yöntemle ayırt edilebilir. Geniş alanlarda hızlı ve etkili çözüm sunar.</p>
+</div>
+<div class="flex items-center gap-3 mt-2">
+<img alt="Yazar" class="w-8 h-8 rounded-full border-2 border-blue-500 object-cover" src="../images/team.jpeg"/>
+<span class="text-gray-700 font-semibold text-sm">ZT Blog</span>
+</div>
+<a class="mt-2 text-gray-700 text-sm font-medium underline underline-offset-2 hover:text-orange-600 transition cursor-pointer" href="#">Detaylı Bilgi</a>
+</div>
+</div>
+
+<div class="group relative blog-card rounded-3xl shadow-xl overflow-hidden flex flex-col h-full min-h-[420px] hover:-translate-y-1 transition-transform border-b-8 border-orange-400">
+<div class="relative h-64 overflow-hidden">
+<img alt="Saha Deneyimleri ve İpuçları" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" src="../images/veyn.jpeg"/>
+
+<svg class="absolute bottom-0 right-0 w-1/2 h-8" fill="none" viewbox="0 0 200 32"><path d="M0,16 Q50,32 100,16 T200,16 V32 H0Z" fill="#fff"></path></svg>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center text-sm text-gray-500 mb-2"><i class="fas fa-calendar-alt mr-2"></i>12 Şubat 2023 <span class="mx-2">•</span> 3 dk okuma</div>
+<h3 class="text-lg font-bold text-gray-700 mb-2 heading-font group-hover:text-orange-500 transition">Vane (Vayn) Cihazı ile Kayma Deneyi</h3>
+<p class="text-gray-700 mb-2">Özellikle yumuşak killerde kullanılır. Zemine batırılan kanatlı bir çubuk belirli hızda çevrilerek zeminin
+                    ne kadar direndiği ölçülür. Ne kadar çok dönerse, zemin o kadar yumuşak demektir. Bu deney zeminin
+                    "kaymaya karşı direncini" doğrudan gösterir.</p>
+</div>
+<div class="flex items-center gap-3 mt-2">
+<img alt="Yazar" class="w-8 h-8 rounded-full border-2 border-orange-500 object-cover" src="../images/team.jpeg"/>
+<span class="text-gray-700 font-semibold text-sm">ZT Blog</span>
+</div>
+<a class="mt-2 text-gray-700 text-sm font-medium underline underline-offset-2 hover:text-orange-600 transition cursor-pointer" href="#">Detaylı Bilgi</a>
+</div>
+</div>
+</div>
+</div></section><section class="py-20 bg-gray-50">
+<div class="container mx-auto px-4 max-w-6xl">
+<div class="text-center mb-16" data-aos="fade-up">
+<div class="inline-flex items-center bg-blue-100 text-blue-900 px-4 py-1 rounded-full mb-4">
+<i class="fas fa-question-circle mr-2"></i>
+<span>SSS</span>
+</div>
+<h2 class="text-4xl md:text-5xl font-extrabold text-blue-900 mb-4 heading-font">SIKÇA SORULAN <span class="text-yellow-500">SORULAR</span></h2>
+<p class="text-lg text-gray-600 max-w-2xl mx-auto">Zemin Teknik hakkında merak edilen sorular ve detaylı cevapları. Eğer aradığınız soruyu bulamazsanız bizimle iletişime geçebilirsiniz.</p>
+</div>
+
+<div class="max-w-2xl mx-auto mb-12" data-aos="fade-up" data-aos-delay="100">
+<div class="relative">
+<input class="w-full px-6 py-4 text-lg border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none transition-all duration-300 shadow-sm" id="faqSearch" placeholder="Sorunuzu yazın..." type="text"/>
+<i class="fas fa-search absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 text-xl"></i>
+</div>
+</div>
+
+<div class="flex flex-wrap justify-center gap-4 mb-12" data-aos="fade-up" data-aos-delay="200">
+<button class="faq-category-btn active px-6 py-3 bg-blue-900 text-white rounded-full font-medium transition-all duration-300 hover:bg-blue-800" data-category="all">
+                    Tümü
+                </button>
+<button class="faq-category-btn px-6 py-3 bg-white text-gray-700 border-2 border-gray-200 rounded-full font-medium transition-all duration-300 hover:bg-blue-50 hover:border-blue-300" data-category="hizmetler">
+                    Hizmetler
+                </button>
+<button class="faq-category-btn px-6 py-3 bg-white text-gray-700 border-2 border-gray-200 rounded-full font-medium transition-all duration-300 hover:bg-blue-50 hover:border-blue-300" data-category="ekipmanlar">
+                    Ekipmanlar
+                </button>
+<button class="faq-category-btn px-6 py-3 bg-white text-gray-700 border-2 border-gray-200 rounded-full font-medium transition-all duration-300 hover:bg-blue-50 hover:border-blue-300" data-category="projeler">
+                    Projeler
+                </button>
+<button class="faq-category-btn px-6 py-3 bg-white text-gray-700 border-2 border-gray-200 rounded-full font-medium transition-all duration-300 hover:bg-blue-50 hover:border-blue-300" data-category="genel">
+                    Genel
+                </button>
+</div>
+
+<div class="space-y-4" id="faqContainer">
+
+<div class="faq-item bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden" data-aos="fade-up" data-aos-delay="100" data-category="hizmetler">
+<button class="faq-question w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-all duration-300">
+<h3 class="text-lg font-bold text-blue-900">Sondaj nedir, ne amaçla yapılır?</h3>
+<i class="fas fa-chevron-down text-blue-900 text-xl transition-transform duration-300"></i>
+</button>
+<div class="faq-answer hidden px-6 pb-5">
+<p class="text-gray-700 leading-relaxed">Sondaj; yer altındaki zemin, kaya ve su gibi doğal yapıları incelemek için yapılan silindirik kazı işlemidir. İnşaat, altyapı ve çevre projelerinde doğru kararlar verebilmek için zemini yakından tanımamıza yardımcı olur.</p>
+</div>
+</div>
+
+<div class="faq-item bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden" data-aos="fade-up" data-aos-delay="110" data-category="hizmetler">
+<button class="faq-question w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-all duration-300">
+<h3 class="text-lg font-bold text-blue-900">Sondaj yaparken en çok dikkat edilmesi gerekenler nelerdir?</h3>
+<i class="fas fa-chevron-down text-blue-900 text-xl transition-transform duration-300"></i>
+</button>
+<div class="faq-answer hidden px-6 pb-5">
+<p class="text-gray-700 leading-relaxed">Zemin katmanlarının derinliklerini doğru belirlemek çok önemlidir. Çünkü temel tasarımı ve maliyet hesapları bu verilere dayanır. Küçük bir hata, büyük bir yapısal riske dönüşebilir.</p>
+</div>
+</div>
+
+<div class="faq-item bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden" data-aos="fade-up" data-aos-delay="120" data-category="genel">
+<button class="faq-question w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-all duration-300">
+<h3 class="text-lg font-bold text-blue-900">Sondaj maliyetini etkileyen başlıca faktörler nelerdir?</h3>
+<i class="fas fa-chevron-down text-blue-900 text-xl transition-transform duration-300"></i>
+</button>
+<div class="faq-answer hidden px-6 pb-5">
+<p class="text-gray-700 leading-relaxed">Derinlik arttıkça sondaj daha zor ve maliyetli hale gelir. Özellikle deniz sondajlarında, su derinliği ve ulaşım şartları maliyeti doğrudan etkiler. Zeminin yapısı ve ekipman seçimi de önemli faktörlerdendir.</p>
+</div>
+</div>
+
+<div class="faq-item bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden" data-aos="fade-up" data-aos-delay="130" data-category="hizmetler">
+<button class="faq-question w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-all duration-300">
+<h3 class="text-lg font-bold text-blue-900">Bir sondaj çalışması ne kadar sürer?</h3>
+<i class="fas fa-chevron-down text-blue-900 text-xl transition-transform duration-300"></i>
+</button>
+<div class="faq-answer hidden px-6 pb-5">
+<p class="text-gray-700 leading-relaxed">Süre, zemin koşullarına ve sondaj sayısına bağlıdır. Tecrübemize göre, uygun şartlarda günde ortalama 2 sondaj tamamlayabiliyoruz. Deniz ve kara projelerinde bu oranı yıllardır başarıyla sürdürüyoruz.</p>
+</div>
+</div>
+
+<div class="faq-item bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden" data-aos="fade-up" data-aos-delay="170" data-category="hizmetler">
+<button class="faq-question w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-all duration-300">
+<h3 class="text-lg font-bold text-blue-900">İnşaat öncesi zemin analizinin bu kadar kritik olmasının sebebi nedir?</h3>
+<i class="fas fa-chevron-down text-blue-900 text-xl transition-transform duration-300"></i>
+</button>
+<div class="faq-answer hidden px-6 pb-5">
+<p class="text-gray-700 leading-relaxed">Zemin analizleri, yapının güvenliği için temel derinliğinden taşıma gücüne kadar tüm verileri sağlar. Doğru projelendirme için bu rapor şarttır. Uzman ekibimizle, 17 yıllık tecrübeyle bu süreci titizlikle yürütüyoruz.</p>
+</div>
+</div>
+
+<div class="faq-item bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden" data-aos="fade-up" data-aos-delay="180" data-category="ekipmanlar">
+<button class="faq-question w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-all duration-300">
+<h3 class="text-lg font-bold text-blue-900">GPR (Yer Radarı) ile sondaj ilişkisi nedir?</h3>
+<i class="fas fa-chevron-down text-blue-900 text-xl transition-transform duration-300"></i>
+</button>
+<div class="faq-answer hidden px-6 pb-5">
+<p class="text-gray-700 leading-relaxed">GPR, zeminin altındaki boru, boşluk veya yapıları tespit etmek için kullanılır. Sondaj öncesi riskleri görmek ve nokta seçimini doğru yapmak için yardımcıdır. Özellikle dolgu alanlarında büyük kolaylık sağlar.</p>
+</div>
+</div>
+
+<div class="faq-item bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden" data-aos="fade-up" data-aos-delay="220" data-category="ekipmanlar">
+<button class="faq-question w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-all duration-300">
+<h3 class="text-lg font-bold text-blue-900">Wireline sondajın avantajları nedir?</h3>
+<i class="fas fa-chevron-down text-blue-900 text-xl transition-transform duration-300"></i>
+</button>
+<div class="faq-answer hidden px-6 pb-5">
+<p class="text-gray-700 leading-relaxed">Sondajda Wireline yöntemi, karotu sondajı durdurmadan almayı sağlar. Bu da zaman kazandırır ve derin sondajlarda büyük kolaylık sunar. Numune kalitesi de genellikle daha yüksektir.</p>
+</div>
+</div>
+
+<div class="faq-item bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden" data-aos="fade-up" data-aos-delay="230" data-category="ekipmanlar">
+<button class="faq-question w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-all duration-300">
+<h3 class="text-lg font-bold text-blue-900">Batimetri ölçümü alınırken dikkat edilmesi gereken hususlar nelerdir?</h3>
+<i class="fas fa-chevron-down text-blue-900 text-xl transition-transform duration-300"></i>
+</button>
+<div class="faq-answer hidden px-6 pb-5">
+<p class="text-gray-700 leading-relaxed">Doğru veri için deniz durumu, dalga yüksekliği ve ekipman kalibrasyonu çok önemlidir. Ayrıca hassas GPS sistemleriyle konumlandırma yapılmalıdır. Veri işleme süreci de en az ölçüm kadar kritiktir.</p>
+</div>
+</div>
+
+<div class="faq-item bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden" data-aos="fade-up" data-aos-delay="250" data-category="genel">
+<button class="faq-question w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-all duration-300">
+<h3 class="text-lg font-bold text-blue-900">Sondaj firması seçerken nelere dikkat edilmeli?</h3>
+<i class="fas fa-chevron-down text-blue-900 text-xl transition-transform duration-300"></i>
+</button>
+<div class="faq-answer hidden px-6 pb-5">
+<p class="text-gray-700 leading-relaxed">Firma deneyimi, ekipman kalitesi ve mühendis kadrosu mutlaka sorgulanmalıdır. Ruhsat durumu ve referans projeler güven açısından belirleyicidir. Ayrıca çevre ve iş güvenliği hassasiyetine dikkat edilmelidir.</p>
+</div>
+</div>
+
+<div class="faq-item bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden" data-aos="fade-up" data-aos-delay="280" data-category="genel">
+<button class="faq-question w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-all duration-300">
+<h3 class="text-lg font-bold text-blue-900">Zemin etüt raporu sonuç ve önerilerde yer alan "Zemin Sınıfı" ne anlama gelmektedir?</h3>
+<i class="fas fa-chevron-down text-blue-900 text-xl transition-transform duration-300"></i>
+</button>
+<div class="faq-answer hidden px-6 pb-5">
+<p class="text-gray-700 leading-relaxed">Zemin sınıfı, zeminin türüne ve davranışına göre yapılan teknik bir sınıflamadır. Yapının temel sistemi bu sınıfa göre belirlenir. Deprem performansı hesaplarında da doğrudan kullanılır.</p>
+</div>
+</div>
+
+<div class="faq-item bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden" data-aos="fade-up" data-aos-delay="290" data-category="genel">
+<button class="faq-question w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-all duration-300">
+<h3 class="text-lg font-bold text-blue-900">Zemin etüdü sonuçları değişebilir mi, güncellenir mi?</h3>
+<i class="fas fa-chevron-down text-blue-900 text-xl transition-transform duration-300"></i>
+</button>
+<div class="faq-answer hidden px-6 pb-5">
+<p class="text-gray-700 leading-relaxed">Zemin etüdü sonuçları genellikle sabittir, ancak yeni veriler elde edildiğinde veya proje kapsamı değiştiğinde rapor güncellenebilir. Bu durumda ek sondajlar ve analizler yapılabilir.</p>
+</div>
+</div>
+
+<div class="faq-item bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden" data-aos="fade-up" data-aos-delay="320" data-category="genel">
+<button class="faq-question w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-all duration-300">
+<h3 class="text-lg font-bold text-blue-900">Kaya ile zemin arasındaki fark nedir?</h3>
+<i class="fas fa-chevron-down text-blue-900 text-xl transition-transform duration-300"></i>
+</button>
+<div class="faq-answer hidden px-6 pb-5">
+<p class="text-gray-700 leading-relaxed">Zemin gevşek yapılı, dağılabilir bir malzemedir; kaya ise daha sert ve bütünlüklüdür. Sondaj yöntemi, dayanım ve analiz süreci bu iki malzemede tamamen farklıdır.</p>
+</div>
+</div>
+
+<div class="faq-item bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden" data-aos="fade-up" data-aos-delay="340" data-category="projeler">
+<button class="faq-question w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-all duration-300">
+<h3 class="text-lg font-bold text-blue-900">Deniz sondajı yaparken deniz yaşamı / deniz canlıları zarar görür mü?</h3>
+<i class="fas fa-chevron-down text-blue-900 text-xl transition-transform duration-300"></i>
+</button>
+<div class="faq-answer hidden px-6 pb-5">
+<p class="text-gray-700 leading-relaxed">Uygun ekipman ve çevreye duyarlı yöntemlerle çalışıldığında deniz canlılarına zarar verilmez. Gerekirse ÇED raporlarıyla süreç kontrol altına alınır. Biz bu konuda hassas davranıyoruz.</p>
+</div>
+</div>
+
+<div class="faq-item bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden" data-aos="fade-up" data-aos-delay="350" data-category="projeler">
+<button class="faq-question w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-all duration-300">
+<h3 class="text-lg font-bold text-blue-900">Bir liman yapılmadan önce neler yapılması gereklidir?</h3>
+<i class="fas fa-chevron-down text-blue-900 text-xl transition-transform duration-300"></i>
+</button>
+<div class="faq-answer hidden px-6 pb-5">
+<p class="text-gray-700 leading-relaxed">Zemin etüdü, batimetri ve jeofizik analizlerle deniz tabanı detaylıca incelenir. Ardından mühendislik projeleri, ruhsat işlemleri ve çevresel değerlendirmeler yapılır. Her şey sağlam zemine dayanır.</p>
+</div>
+</div>
+
+<div class="faq-item bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden" data-aos="fade-up" data-aos-delay="370" data-category="hizmetler">
+<button class="faq-question w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-all duration-300">
+<h3 class="text-lg font-bold text-blue-900">Zemin iyileştirmesi ne demek, nasıl yapılır?</h3>
+<i class="fas fa-chevron-down text-blue-900 text-xl transition-transform duration-300"></i>
+</button>
+<div class="faq-answer hidden px-6 pb-5">
+<p class="text-gray-700 leading-relaxed">Zemin iyileştirmesi, zeminin taşıma gücünü artırmak için yapılan teknik müdahalelerdir. Enjeksiyon, sıkıştırma ya da donatı gibi farklı yöntemler kullanılır. Projeye özel olarak belirlenir.</p>
+</div>
+</div>
+
+<div class="faq-item bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden" data-aos="fade-up" data-aos-delay="390" data-category="genel">
+<button class="faq-question w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-all duration-300">
+<h3 class="text-lg font-bold text-blue-900">Türkiye genelinde hangi şehirlerde zemin daha riskli?</h3>
+<i class="fas fa-chevron-down text-blue-900 text-xl transition-transform duration-300"></i>
+</button>
+<div class="faq-answer hidden px-6 pb-5">
+<p class="text-gray-700 leading-relaxed">İstanbul, Bursa, İzmir gibi alüvyon zeminli ve deprem riski yüksek şehirlerde zemin daha hassastır. Ancak risk sadece şehirle değil, mikro bölgeyle de ilgilidir. Yerel analiz çok önemlidir.</p>
+</div>
+</div>
+
+<div class="faq-item bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden" data-aos="fade-up" data-aos-delay="410" data-category="genel">
+<button class="faq-question w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-all duration-300">
+<h3 class="text-lg font-bold text-blue-900">Kaç yıldır bu işi yapıyorsunuz?</h3>
+<i class="fas fa-chevron-down text-blue-900 text-xl transition-transform duration-300"></i>
+</button>
+<div class="faq-answer hidden px-6 pb-5">
+<p class="text-gray-700 leading-relaxed">Bu alanda 17 yıllık tecrübemiz var. Denizden karaya, küçük yapıdan büyük altyapı projelerine kadar çok geniş bir yelpazede çalıştık.</p>
+</div>
+</div>
+
+<div class="faq-item bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden" data-aos="fade-up" data-aos-delay="440" data-category="genel">
+<button class="faq-question w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-all duration-300">
+<h3 class="text-lg font-bold text-blue-900">Sizi diğer firmalardan ayıran en önemli şey nedir?</h3>
+<i class="fas fa-chevron-down text-blue-900 text-xl transition-transform duration-300"></i>
+</button>
+<div class="faq-answer hidden px-6 pb-5">
+<p class="text-gray-700 leading-relaxed">Sahip olduğumuz ruhsatlı sondaj gemisi, teknik donanımımız ve deneyimli ekibimizle fark yaratıyoruz. Güvenilirlik ve çözüm odaklı yaklaşım en güçlü yanımız.</p>
+</div>
+</div>
+
+<div class="faq-item bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden" data-aos="fade-up" data-aos-delay="450" data-category="projeler">
+<button class="faq-question w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-all duration-300">
+<h3 class="text-lg font-bold text-blue-900">Şu ana kadar kaç farklı şehirde çalışma yaptınız?</h3>
+<i class="fas fa-chevron-down text-blue-900 text-xl transition-transform duration-300"></i>
+</button>
+<div class="faq-answer hidden px-6 pb-5">
+<p class="text-gray-700 leading-relaxed">Türkiye'nin dört bir yanında, 40'tan fazla şehirde zemin etüt çalışmaları gerçekleştirdik. Kıyıdan iç bölgelere kadar çok farklı coğrafyalarda deneyim sahibiyiz.</p>
+</div>
+</div>
+
+<div class="faq-item bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden" data-aos="fade-up" data-aos-delay="470" data-category="genel">
+<button class="faq-question w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-all duration-300">
+<h3 class="text-lg font-bold text-blue-900">Ekibiniz kimlerden oluşuyor? Saha ve ofis organizasyonunuz nasıl?</h3>
+<i class="fas fa-chevron-down text-blue-900 text-xl transition-transform duration-300"></i>
+</button>
+<div class="faq-answer hidden px-6 pb-5">
+<p class="text-gray-700 leading-relaxed">Ekibimizde jeoloji mühendisleri, sondörler, jeofizik uzmanları ve teknik destek personeli yer alıyor. Saha ve ofis birimlerimiz koordineli ve güçlü bir iletişimle çalışır.</p>
+</div>
+</div>
+
+<div class="text-center mt-12" data-aos="fade-up" data-aos-delay="600">
+<p class="text-gray-600 mb-6">Aradığınız soruyu bulamadınız mı?</p>
+<a class="inline-flex items-center px-8 py-4 bg-blue-900 text-white font-bold rounded-xl hover:bg-blue-800 transition-all duration-300 shadow-lg hover:shadow-xl" href="../iletisim/index.html">
+<i class="fas fa-envelope mr-3"></i>
+                    Bizimle İletişime Geçin
+                </a>
+</div>
+</div>
+</div></section></div><section class="zt-cta">
+<div class="zt-cta__inner">
+<div><span class="zt-kicker">Teklif &amp; danışma</span><h2>Bu konuda teklif veya teknik görüş almak ister misiniz?</h2><p>Sahanızı ve hedeflerinizi anlatın; uzman ekibimiz ekipman, süre ve maliyet içeren net bir teklif hazırlasın.</p></div>
+<div class="zt-cta__actions">
+<a class="zt-cta__phone" href="tel:+902164895277"><i class="fas fa-phone-alt"></i> +90 216 489 52 77</a>
+<a class="zt-btn zt-btn--primary zt-btn--lg" href="../iletisim/index.html">Teklif Formu <i class="fas fa-arrow-right"></i></a>
+</div>
+</div>
+</section><footer class="zt-footer">
+<div class="zt-footer__inner">
+<div class="zt-footer__brand">
+<img alt="Zemin Teknik" src="../images/header-logo.png"/>
+<p>2007 yılında kurulan Zemin Teknik; zemin etütleri, deniz etütleri ve jeolojik-jeoteknik araştırmalarda karada ve denizde, yurt içi ve uluslararası projelerde kapsamlı saha araştırma çözümleri sunar. Türkiye'nin ilk ruhsatlı sondaj gemisinin sahibidir.</p>
+<div class="zt-footer__social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/zt-zemi̇n-tekni̇k" rel="noopener" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+<a aria-label="Instagram" href="https://www.instagram.com/zeminteknik" rel="noopener" target="_blank"><i class="fab fa-instagram"></i></a>
+<a aria-label="YouTube" href="https://www.youtube.com/@ZeminTeknik" rel="noopener" target="_blank"><i class="fab fa-youtube"></i></a>
+<a aria-label="Facebook" href="https://www.facebook.com/p/Zemin-Teknik-100057754535914/?locale=tr_TR" rel="noopener" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a aria-label="WhatsApp" href="https://wa.me/905322097496" rel="noopener" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</div>
+</div>
+<div><h4>Kurumsal</h4><ul><li><a href="../kurumsal/hakkimizda/index.html">Hakkımızda</a></li><li><a href="../kurumsal/tarihce/index.html">Tarihçe</a></li><li><a href="../kurumsal/vizyon/index.html">Vizyon &amp; Misyon</a></li><li><a href="../kurumsal/sertifikalar/index.html">Sertifikalar</a></li><li><a href="../kurumsal/kariyer/index.html">Kariyer</a></li><li><a href="../projeler/index.html">Projeler</a></li><li><a href="../blog/index.html">Blog</a></li></ul></div>
+<div><h4>Hizmetler</h4><ul><li><a href="../hizmetler/deniz-sondaj-hizmetleri/index.html">Deniz Sondaj Hizmetleri</a></li><li><a href="../hizmetler/kara-sondaj-hizmetleri/index.html">Kara Sondaj Hizmetleri</a></li><li><a href="../hizmetler/deniz-dip-tarama/index.html">Deniz Dibi Numune Alımı</a></li><li><a href="../hizmetler/batimetrik-haritalama/index.html">Batimetrik Haritalama</a></li><li><a href="../hizmetler/yer-radari-gpr-uygulamalari/index.html">Yer Radarı (GPR) Uygulamaları</a></li><li><a href="../hizmetler/sismik-risk-zemin-analizleri/index.html">Sismik Risk &amp; Zemin Dinamik Analizleri</a></li><li><a href="../hizmetler/raporlama-danismanlik/index.html">Raporlama &amp; Danışmanlık</a></li><li><a href="../hizmetler/su-kuyusu-acimi/index.html">Su Kuyusu Açımı</a></li></ul></div>
+<div><h4>İletişim</h4><ul>
+<li><a href="https://maps.google.com/?q=İdealtepe+Mh.+Rıfkı+Tongsir+Cd.+No:30+Maltepe+İstanbul" rel="noopener" target="_blank"><i class="fas fa-map-marker-alt"></i><span>İdealtepe Mh. Rıfkı Tongsir Cd. No: 30 D: 8<br/>Maltepe / İstanbul</span></a></li>
+<li><a href="tel:+902164895277"><i class="fas fa-phone-alt"></i><span>+90 216 489 52 77</span></a></li>
+<li><a href="https://wa.me/905322097496" rel="noopener" target="_blank"><i class="fab fa-whatsapp"></i><span>+90 532 209 74 96</span></a></li>
+<li><a href="mailto:bilgi@zeminteknik.com"><i class="fas fa-envelope"></i><span>bilgi@zeminteknik.com</span></a></li>
+<li><a><i class="fas fa-clock"></i><span>Hafta içi 09:00 – 17:00</span></a></li>
+</ul></div>
+</div>
+<div class="zt-footer__bottom"><div class="zt-footer__bottom-inner">
+<span>© <span data-year="">2025</span> ZT Zemin Teknik Zemin Etüdü Müh. ve İnş. Tic. Ltd. Şti. Tüm hakları saklıdır.</span>
+<nav><a href="../kurumsal/sertifikalar/index.html">Kalite Politikası</a><a href="../kurumsal/kariyer/index.html">Kariyer</a><a href="https://www.linkedin.com/in/ahmetmustafayilmaz/" rel="noopener noreferrer" target="_blank">Created by AMY</a></nav>
+</div></div>
+</footer><a aria-label="WhatsApp ile yazın" class="whatsapp-float" href="https://wa.me/905322097496" rel="noopener" target="_blank"><i class="fab fa-whatsapp"></i></a><script>
+        window.AOS && AOS.init({ duration: 1000, once: true, easing: 'ease-in-out' });
+        
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenuDrawer = document.getElementById('mobileMenuDrawer');
+        const closeMobileMenu = document.getElementById('closeMobileMenu');
+        if (mobileMenuBtn && mobileMenuDrawer && closeMobileMenu) {
+          mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuDrawer.classList.remove('hidden');
+          });
+          closeMobileMenu.addEventListener('click', () => {
+            mobileMenuDrawer.classList.add('hidden');
+          });
+          // Menü dışına tıklayınca kapansın
+          mobileMenuDrawer.addEventListener('click', (e) => {
+            if (e.target === mobileMenuDrawer) {
+              mobileMenuDrawer.classList.add('hidden');
+            }
+          });
+        }
+        // Mobile Dropdown Accordion
+        document.querySelectorAll('.mobile-dropdown-btn').forEach(btn => {
+          btn.addEventListener('click', function() {
+            const targetId = btn.getAttribute('data-target');
+            const targetMenu = document.getElementById(targetId);
+            const icon = btn.querySelector('i');
+            
+            // Diğer menüleri kapat
+            document.querySelectorAll('.mobile-dropdown-btn').forEach(otherBtn => {
+              const otherTarget = document.getElementById(otherBtn.getAttribute('data-target'));
+              const otherIcon = otherBtn.querySelector('i');
+              if (otherTarget && otherTarget !== targetMenu) {
+                otherTarget.classList.add('hidden');
+                if (otherIcon) {
+                  otherIcon.style.transform = 'rotate(0deg)';
+                }
+              }
+            });
+            
+            // Seçili menüyü aç/kapat
+            if (targetMenu) {
+              targetMenu.classList.toggle('hidden');
+              if (icon) {
+                icon.style.transform = targetMenu.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+              }
+            }
+          });
+        });
+        
+        // Mobile Sub-Dropdown Accordion
+        document.querySelectorAll('.mobile-sub-dropdown-btn').forEach(btn => {
+          btn.addEventListener('click', function() {
+            const targetId = btn.getAttribute('data-target');
+            const targetMenu = document.getElementById(targetId);
+            const icon = btn.querySelector('i');
+            
+            // Seçili alt menüyü aç/kapat
+            if (targetMenu) {
+              targetMenu.classList.toggle('hidden');
+              if (icon) {
+                icon.style.transform = targetMenu.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(90deg)';
+              }
+            }
+          });
+        });
+        
+        window.addEventListener('scroll', function() {
+          var header = document.getElementById('mainHeader');
+          if (!header) return;
+          if (window.scrollY > 30) {
+            header.classList.add('bg-blue-900', 'shadow-xl', 'border-b', 'border-blue-800');
+            header.classList.remove('bg-white');
+          } else {
+            header.classList.remove('bg-blue-900', 'shadow-xl', 'border-b', 'border-blue-800');
+            header.classList.add('bg-white');
+          }
+        });
+
+        // SSS JavaScript Fonksiyonları
+        document.addEventListener('DOMContentLoaded', function() {
+            // SSS Açma/Kapama Fonksiyonu
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;
+                    const icon = this.querySelector('i');
+                    const isOpen = answer.classList.contains('hidden');
+                    
+                    // Diğer tüm cevapları kapat
+                    document.querySelectorAll('.faq-answer').forEach(ans => {
+                        ans.classList.add('hidden');
+                    });
+                    document.querySelectorAll('.faq-question i').forEach(ic => {
+                        ic.style.transform = 'rotate(0deg)';
+                    });
+                    
+                    // Seçili cevabı aç/kapat
+                    if (isOpen) {
+                        answer.classList.remove('hidden');
+                        icon.style.transform = 'rotate(180deg)';
+                    } else {
+                        answer.classList.add('hidden');
+                        icon.style.transform = 'rotate(0deg)';
+                    }
+                });
+            });
+
+            // SSS Arama Fonksiyonu
+            const faqSearch = document.getElementById('faqSearch');
+            if (faqSearch) {
+                faqSearch.addEventListener('input', function() {
+                    const searchTerm = this.value.toLowerCase();
+                    const faqItems = document.querySelectorAll('.faq-item');
+                    
+                    faqItems.forEach(item => {
+                        const question = item.querySelector('h3').textContent.toLowerCase();
+                        const answer = item.querySelector('p').textContent.toLowerCase();
+                        
+                        if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            }
+
+            // SSS Kategori Filtreleme
+            const categoryButtons = document.querySelectorAll('.faq-category-btn');
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const category = this.getAttribute('data-category');
+                    
+                    // Aktif buton stilini güncelle
+                    categoryButtons.forEach(btn => {
+                        btn.classList.remove('active', 'bg-blue-900', 'text-white');
+                        btn.classList.add('bg-white', 'text-gray-700', 'border-2', 'border-gray-200');
+                    });
+                    this.classList.add('active', 'bg-blue-900', 'text-white');
+                    this.classList.remove('bg-white', 'text-gray-700', 'border-2', 'border-gray-200');
+                    
+                    // SSS öğelerini filtrele
+                    const faqItems = document.querySelectorAll('.faq-item');
+                    faqItems.forEach(item => {
+                        const itemCategory = item.getAttribute('data-category');
+                        
+                        if (category === 'all' || itemCategory === category) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // SSS Animasyon Efektleri
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(20px)';
+                item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(item);
+            });
+        });
+    </script><script src="../js/zt.js"></script></body>
+</html> 
