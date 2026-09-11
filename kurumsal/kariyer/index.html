@@ -281,9 +281,9 @@
   var f=document.querySelector('form[action="job-application.php"]'), out=document.getElementById('formResult'); if(!f) return;
   f.addEventListener('submit', function(e){
     e.preventDefault(); var btn=f.querySelector('button[type="submit"]'); var old=btn.textContent; btn.disabled=true; btn.textContent='Gönderiliyor...';
-    fetch(f.action,{method:'POST',body:new FormData(f)}).then(function(r){return r.json();}).then(function(d){
+    window.ztPostForm(f.action,new FormData(f)).then(function(d){
       out.textContent=d.message||(d.success?'Başvurunuz gönderildi.':'Bir hata oluştu.'); out.style.color=d.success?'#1f9e9a':'#d4570f'; if(d.success) f.reset();
-    }).catch(function(){ out.textContent='Bağlantı hatası, lütfen tekrar deneyin.'; out.style.color='#d4570f'; })
+    }).catch(function(err){ out.textContent=(err&&err.message)||'Bağlantı hatası, lütfen tekrar deneyin.'; out.style.color='#d4570f'; })
     .finally(function(){ btn.disabled=false; btn.textContent=old; });
   });
 })();

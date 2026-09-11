@@ -559,15 +559,7 @@
                     }
                     
                     // Simüle edilmiş form gönderimi (gerçek uygulamada backend'e gönderilir)
-                    fetch(this.action, {
-                        method: 'POST',
-                        body: formData,
-                        headers: { 'Accept': 'application/json' }
-                    })
-                    .then(response => response.text().then(text => {
-                        try { return JSON.parse(text); }
-                        catch (err) { throw new Error('Sunucu beklenmedik bir yanıt döndürdü (HTTP ' + response.status + ').'); }
-                    }))
+                    window.ztPostForm(this.action, formData)
                     .then(data => {
                         if (data.success) {
                             showNotification(data.message, 'success');

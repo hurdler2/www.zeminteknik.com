@@ -65,3 +65,24 @@
     el.textContent = new Date().getFullYear();
   });
 })();
+
+/* Form POST yardımcısı — HostGator bot koruması POST isteklerinde "humans_XXXX" çerezi
+   yoksa 409 + <script>document.cookie=...;reload()</script> döndürür. fetch bu betiği
+   çalıştıramaz; çerezi biz kurup isteği bir kez yineleriz. JSON dışı yanıtlar okunur hataya çevrilir. */
+window.ztPostForm = function (url, formData) {
+  function send() {
+    return fetch(url, { method: 'POST', body: formData, credentials: 'same-origin', headers: { 'Accept': 'application/json' } });
+  }
+  function parse(response, retried) {
+    return response.text().then(function (text) {
+      var m = /document\.cookie\s*=\s*"([^"]+)"/.exec(text);
+      if (response.status === 409 && m && !retried) {
+        document.cookie = m[1] + '; path=/';
+        return send().then(function (r) { return parse(r, true); });
+      }
+      try { return JSON.parse(text); }
+      catch (e) { throw new Error('Sunucu beklenmedik bir yanıt döndürdü (HTTP ' + response.status + '). Lütfen sayfayı yenileyip tekrar deneyin.'); }
+    });
+  }
+  return send().then(function (r) { return parse(r, false); });
+};
